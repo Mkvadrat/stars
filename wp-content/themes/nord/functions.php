@@ -13,6 +13,70 @@ Version: 1.0
 ****************************************************************************НАСТРОЙКИ ТЕМЫ*****************************************************************
 ***********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************/
+function pn_scripts(){
+	
+	wp_register_style( 'reset-css', get_template_directory_uri() . '/css/reset.css');
+    wp_enqueue_style( 'reset-css' );
+	
+	wp_register_style( 'fonts-css', get_template_directory_uri() . '/css/fonts.css');
+    wp_enqueue_style( 'fonts-css' );
+	
+	wp_register_style( 'main-css', get_template_directory_uri() . '/css/main.css?v=3');
+    wp_enqueue_style( 'main-css' );
+		
+	wp_register_style( 'media-css', get_template_directory_uri() . '/css/media.css');
+    wp_enqueue_style( 'media-css' );
+	
+	wp_register_style( 'ui-css', get_template_directory_uri() . '/js/jquery-ui-1.12.1/jquery-ui.min.css');
+    wp_enqueue_style( 'ui-css' );
+	
+	wp_register_style( 'carousel-css', get_template_directory_uri() . '/css/owl.carousel.min.css');
+    wp_enqueue_style( 'carousel-css' );
+	
+	wp_register_style( 'theme-css', get_template_directory_uri() . '/css/owl.theme.default.css');
+    wp_enqueue_style( 'theme-css' );
+		
+	wp_register_style( 'theme-css', get_template_directory_uri() . '/css/owl.theme.default.css');
+    wp_enqueue_style( 'theme-css' );
+	
+	wp_register_style( 'fancybox-css', get_template_directory_uri() . '/source/jquery.fancybox.css?v=2.1.5');
+    wp_enqueue_style( 'fancybox-css' );
+	
+	wp_register_style( 'fancybox-buttons-css', get_template_directory_uri() . '/source/helpers/jquery.fancybox-buttons.css?v=1.0.5');
+    wp_enqueue_style( 'fancybox-buttons-css' );
+	
+	wp_register_style( 'fancybox-thumbs-css', get_template_directory_uri() . '/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7');
+    wp_enqueue_style( 'fancybox-thumbs-css' );
+	
+	wp_register_style( 'mmenu-css', get_template_directory_uri() . '/css/jquery.mmenu.all.css');
+    wp_enqueue_style( 'mmenu-css' );
+	
+	wp_register_style( 'slimmenu-css', get_template_directory_uri() . '/css/slimmenu.min.css');
+    wp_enqueue_style( 'slimmenu-css' );
+	
+	if (!is_admin()) {
+		wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', '', '', true );
+		
+		wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/jquery-ui-1.12.1/jquery-ui.min.js', '', '', true );
+		wp_enqueue_script( 'carousel-js', get_template_directory_uri() . '/js/owl.carousel.min.js', '', '', true );
+		wp_enqueue_script( 'reviews-js', get_template_directory_uri() . '/js/reviews.js', '', '', true );
+		wp_enqueue_script( 'pack-js', get_template_directory_uri() . '/source/jquery.fancybox.pack.js?v=2.1.5', '', '', true );
+		wp_enqueue_script( 'mousewheel-js', get_template_directory_uri() . '/js/jquery.mousewheel-3.0.6.pack.js', '', '', true );
+		wp_enqueue_script( 'buttons-js', get_template_directory_uri() . '/source/helpers/jquery.fancybox-buttons.js?v=1.0.5', '', '', true );
+		wp_enqueue_script( 'media-js', get_template_directory_uri() . '/source/helpers/jquery.fancybox-media.js?v=1.0.6', '', '', true );
+		wp_enqueue_script( 'thumbs-js', get_template_directory_uri() . '/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7', '', '', true );
+		wp_enqueue_script( 'mmenu-js', get_template_directory_uri() . '/js/jquery.mmenu.all.js', '', '', true );
+		wp_enqueue_script( 'travelline-js', get_template_directory_uri() . '/js/travelline.js', '', '', true );
+		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', '', '', true );
+		wp_enqueue_script( 'slimmenu-js', get_template_directory_uri() . '/js/jquery.slimmenu.min.js', '', '', true );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'pn_scripts' );
+
+
+
+
+
 //Регистрируем название сайта
 function sr_wp_title( $title, $sep ) {
 	global $paged, $page;
