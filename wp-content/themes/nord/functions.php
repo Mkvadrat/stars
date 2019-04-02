@@ -73,9 +73,12 @@ function pn_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'pn_scripts' );
 
-
-
-
+//fix mobile
+function my_register_javascript() {
+  wp_register_script('mediaelement', plugins_url('wp-mediaelement.min.js', __FILE__), array('jquery'), '4.8.2', true);
+  wp_enqueue_script('mediaelement');
+}
+add_action('wp_enqueue_scripts', 'my_register_javascript', 100);
 
 //Регистрируем название сайта
 function sr_wp_title( $title, $sep ) {
