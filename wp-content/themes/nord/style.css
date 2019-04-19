@@ -6,4 +6,628 @@ Author URI: http://mkvadrat.com/
 Description: Тема для сайта Stars
 Version: 1.0
 */
+@font-face {
+    font-family: "PhilosopherBold";
+    src: url("fonts/Philosopher-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+.top__address {
+    border-bottom: 2px solid #E7DCCB;
+    padding: 1px 0;
+}
+
+.top__address .textwidget {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.top__address .textwidget a {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.header {
+    background: #8B2938;
+}
+
+.header .menu a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #fff;
+    padding: 17px 16px;
+}
+
+.header .menu a:hover,
+.header .menu li:hover a {
+    text-decoration: underline;
+    color: #6f262f;
+    background-color: #EAD9BE;
+}
+
+.header .menu .left-side .first-menu li, .header .menu .right-side .first-menu li {
+    float: none;
+}
+
+.header .menu .drop-menu {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    top: 100%;
+    padding-top: 4px;
+}
+
+.header .menu .drop-menu li a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    line-height: 14.35px;
+    text-align: left;
+    color: #fff;
+    background: rgba(136, 21, 35, 0.93);
+    text-transform: none;
+    text-decoration: none;
+}
+
+.header .logo a {
+    text-decoration: none;
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.header .logo {
+    width: auto;
+    top: 36px;
+    margin-left: -111px;
+}
+
+.header .menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.header .menu .left-side .first-menu, .header .menu .right-side .first-menu {
+    width: auto;
+    float: none;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.header .menu .left-side, .header .menu .right-side {
+    height: 100%;
+}
+
+.header .menu .right-side .first-menu > li:last-child {
+    background-color: #EAD9BE;
+    border-radius: 15px;
+    text-align: center;
+    height: 97px;
+    width: 201px;
+    position: fixed;
+    right: 3px;
+    top: 9px;
+    padding: 3px;
+    z-index: 1;
+}
+
+.header .menu .right-side .first-menu > li.phon div {
+    border: 1px solid #C12A24;
+    border-radius: 15px;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.header .menu .right-side .first-menu > li:last-child span img {
+    display: none;
+}
+
+.header .menu .right-side .first-menu > li:last-child a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+.header .menu .right-side .first-menu > li:last-child a:nth-child(2) {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+.header .menu .right-side .first-menu > li:last-child span {
+    background: #7b0808;
+    border: 4px solid #a40000;
+    background-image: -webkit-linear-gradient(bottom, #530000 0%, #e00606 100%);
+    background-image: linear-gradient(to top, #530000 0%, #e00606 100%);
+    border-radius: 15px;
+    height: 36px;
+    width: 201px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 16.8px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+}
+
+.header .menu .right-side .first-menu > li:last-child span:hover {
+    background: #a40000;
+    background-image: -webkit-linear-gradient(top, #530000 0%, #e00606 100%);
+    background-image: linear-gradient(to bottom, #530000 0%, #e00606 100%);
+}
+
+header::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #E7DCCB;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+}
+
+.header .menu .drop-menu li a:hover {
+    background-color: rgb(234, 217, 190);
+    color: #6f262f;
+}
+
+.footer-form-block .form {
+    max-width: 920px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 19px;
+}
+
+form .white-title {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+form .white-paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 67.65px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 35px;
+}
+
+footer {
+    background: url("images/form-bg.png") no-repeat center center;
+    background-size: cover;
+    padding: 62px 0 0;
+}
+
+.footer-form-block {
+    background: transparent;
+    border: none;
+}
+
+.footer-form-block .form input[type="text"], .footer-form-block .form input[type="tel"], .footer-form-block .form input[type="email"], .footer-form-block .form textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .3);
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 67.65px;
+    text-align: left;
+    color: #fff;
+    padding: 5px 29px;
+}
+
+.footer-form-block .wpcf7-form-control-wrap.usr_email input[type="email"], .footer-form-block .form textarea {
+    margin-bottom: 6px;
+}
+
+.footer-form-block .form textarea {
+    height: 220px;
+    resize: none;
+}
+
+*::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #fff;
+}
+
+*::-moz-placeholder {
+    font-size: 18px;
+    color: #fff;
+}
+
+*:-ms-input-placeholder {
+    font-size: 18px;
+    color: #fff;
+}
+
+*:-moz-placeholder {
+    font-size: 18px;
+    color: #fff;
+}
+
+.i-take-block label, .i-take-block-form label,
+.i-take-block label a, .i-take-block-form label a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    color: #fff;
+}
+
+form .left-side,
+form .right-side {
+    width: 49%;
+}
+
+.footer-form-block .form input[type="submit"] {
+    background: #7b0808;
+    border: 4px solid #a40000;
+    background-image: -webkit-linear-gradient(bottom, #530000 0%, #e00606 100%);
+    background-image: linear-gradient(to top, #530000 0%, #e00606 100%);
+    border-radius: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    line-height: 16.8px;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    margin: 68px auto 0;
+}
+
+.footer-form-block .form input[type="submit"]:hover {
+    background: #a40000;
+    background-image: -webkit-linear-gradient(top, #530000 0%, #e00606 100%);
+    background-image: linear-gradient(to bottom, #530000 0%, #e00606 100%);
+}
+
+.i-take-block, .i-take-block-form {
+    width: 100%;
+}
+
+.form.callback p {
+    width: 100%;
+}
+
+.footer-block {
+    border-top: none;
+    background-color: transparent;
+}
+
+.footer-block .contacts-block {
+    border-bottom: none !important;
+    width: 100%;
+    padding: 35px 0 0;
+}
+
+.max__wrap {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-form-block {
+    padding: 0 15px;
+}
+
+.footer-form-block #wpcf7-f2450-o1 {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.contacts-block p, .contacts-block-2 p,
+.contacts-block p, .contacts-block-2 p,
+.contacts-block a, .contacts-block-2 a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    color: #fff;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-block-1-1,
+.contact-block-1-2 {
+    width: 49%;
+}
+
+.contact-block-1-2 p {
+    text-align: right;
+}
+
+.contacts-block-2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 12px 0 42px;
+}
+
+.footer-block .make-in {
+    float: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+.contact-block-1-2 p:first-child a {
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.offers {
+    bottom: 67px;
+    background: rgba(250, 235, 212, .9);
+    box-shadow: none;
+    margin-top: 0;
+}
+
+.offers li a .title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17.57px;
+    text-align: center;
+    color: #fff;
+}
+
+.offers li a img {
+    max-width: 100%;
+}
+
+.offers li a .title {
+    background: rgba(0, 0, 0, 0.35);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 17.57px;
+    text-align: center;
+    color: #fff;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.tl-wrapper {
+    background: #EAD9BE;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#tl-search-form {
+    display: block;
+    width: 100%;
+}
+
+.nom-pans {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-size: 48px;
+    line-height: 36px;
+    text-align: center;
+    color: #7b0303;
+}
+
+.sub-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+.our-rooms .text-block + .h3-title-center {
+    border-top: none;
+    margin-top: 0;
+    font-family: 'PhilosopherBold', sans-serif;
+    font-size: 48px;
+    line-height: 36px;
+    text-align: center;
+    color: #7b0303;
+    padding: 45px 0 11px;
+}
+
+.our-rooms figcaption {
+    width: 100%;
+    border-radius: 3px;
+    background: #fff;
+    padding: 10px;
+    height: 140px;
+}
+
+.our-rooms figcaption p {
+    height: 100%;
+    background: transparent;
+    border: 2px solid #ead9be;
+    background: url("images/our-bg-med.png") no-repeat center center;
+    background-size: cover;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.our-rooms figcaption p strong {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #7b0303;
+    margin-bottom: 9px;
+}
+
+.our-rooms figcaption p b {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    color: #666;
+    text-transform: none;
+}
+
+.our-rooms ul li a {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover !important;
+    padding: 0 35px 30px;
+    height: 100%;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.our-rooms ul li,
+.our-rooms ul li:nth-child(1), .our-rooms ul li:nth-child(2), .our-rooms ul li:nth-child(3),
+.our-rooms ul li:nth-child(4), .our-rooms ul li:nth-child(5), .our-rooms ul li:nth-child(6), .our-rooms ul li:nth-child(7) {
+    padding: 0 15px;
+    width: 50%;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.our-rooms ul {
+    width: auto;
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 54px;
+}
+
+.our-rooms ul li:nth-child(1), .our-rooms ul li:nth-child(2), .our-rooms ul li:nth-child(3) {
+    width: 33.33%;
+    height: 494px;
+}
+
+.our-rooms ul li:nth-child(4), .our-rooms ul li:nth-child(5), .our-rooms ul li:nth-child(6), .our-rooms ul li:nth-child(7) {
+    height: 370px;
+}
+
+.our-rooms ul li:nth-child(1) figcaption,
+.our-rooms ul li:nth-child(2) figcaption,
+.our-rooms ul li:nth-child(3) figcaption {
+    height: 170px;
+}
+
+.our-rooms ul li:nth-child(1) figcaption p,
+.our-rooms ul li:nth-child(2) figcaption p,
+.our-rooms ul li:nth-child(3) figcaption p {
+    background: url("images/our-bg-sm.png") no-repeat center center;
+    background-size: cover;
+}
+
+.h1-title-center {
+    padding: 0;
+}
+
+.get-more {
+    background: #7b0808;
+    border: 4px solid #a40000;
+    background-image: -webkit-linear-gradient(bottom, #530000 0%, #e00606 100%);
+    background-image: linear-gradient(to top, #530000 0%, #e00606 100%);
+    border-radius: 15px;
+    width: 188px;
+    height: 46px;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    line-height: 16.8px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.get-more:hover {
+    background: #a40000;
+    background-image: -webkit-linear-gradient(top, #530000 0%, #e00606 100%);
+    background-image: linear-gradient(to bottom, #530000 0%, #e00606 100%);
+}
+
+img{
+    max-width: 100%;
+}
+
+.seo__home .seo__img{
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
