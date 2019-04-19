@@ -873,3 +873,12 @@ function true_add_ajax_comment(){
 }
 add_action('wp_ajax_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_{значение параметра action}
 add_action('wp_ajax_nopriv_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_nopriv_{значение параметра action}
+
+if (function_exists('register_sidebar'))
+    register_sidebar(array(
+        'name' => 'Top address',
+        'before_widget' => '<div class="top__address">',
+        'after_widget' => '</div>',
+    ));
+
+

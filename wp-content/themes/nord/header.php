@@ -62,6 +62,7 @@ Version: 1.0
 	<meta name="theme-color" content="#ffffff">
 	
 	<?php wp_head(); ?>
+      <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
 </head>
 <body>
 	<div id="page">
@@ -106,17 +107,11 @@ Version: 1.0
     <div id="top"></div>
 
     <header class="header">
+        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Top address")) : ?><?php endif; ?>
     	<a class="mmenu" href="#menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
     	<a href="#recall" class="call-back-mobile fancybox"><img src="/wp-content/themes/nord/images/icon-phone-mobile.png" alt="">Заказать обратный звонок</a>
         <div class="logo">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img
-				  src="<?php header_image(); ?>"
-				  height="<?php echo get_custom_header()->height; ?>"
-				  width="<?php echo get_custom_header()->width; ?>"
-				  alt="logotype"
-				/>
-			</a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">ПАНСИОНАТ<br>ЗВЁЗДНЫЙ</a>
         </div>
 
         <div class="mobile-phone-block">
@@ -166,7 +161,7 @@ Version: 1.0
 							'after'           => '',
 							'link_before'     => '',
 							'link_after'      => '',
-							'items_wrap'      => '<ul class="first-menu">%3$s<li>' . getMeta('phone_main_page') . '</li></ul>',
+							'items_wrap'      => '<ul class="first-menu">%3$s<li class="phon"><div>' . getMeta('phone_main_page') . '</div></li></ul>',
 							'depth'           => 2,
 							'walker'          => new primary_menu(),
 						) );
