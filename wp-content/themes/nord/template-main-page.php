@@ -41,9 +41,9 @@ get_header();
             <div class="offers">
                 <?php echo get_post_meta(get_the_ID(), 'link_slider_main_page', $single = true) ?>
 
-                <div class="owl-carousel owl-theme owl-carousel-half offers-slider">
+                <!--<div class="owl-carousel owl-theme owl-carousel-half offers-slider">
                     <?php echo get_post_meta(get_the_ID(), 'link_slider_mobile_main_page', $single = true) ?>
-                </div>
+                </div>-->
             </div>
         </div>
 
@@ -121,7 +121,7 @@ get_header();
                         Номера пансионата
                     </h2>
 
-                    <div class="block-for-half list-rooms">
+                    <!--<div class="block-for-half list-rooms">
                         <div class="left-side">
                             <div class="owl-carousel owl-theme owl-carousel-half">
                                 <?php
@@ -162,7 +162,7 @@ get_header();
                                 <a class="get-more ancLinks" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
                 </div>
@@ -371,7 +371,7 @@ get_header();
                 <?php } ?>
             </ul>
 
-            <div class="owl-carousel owl-theme owl-carousel-half reviews-slider">
+            <!--<div class="owl-carousel owl-theme owl-carousel-half reviews-slider">
                 <?php
                 if (!empty($comments)) {
                     foreach ($comments as $comment) {
@@ -383,7 +383,7 @@ get_header();
                         </div>
                     <?php } ?>
                 <?php } ?>
-            </div>
+            </div>-->
 
             <p><a class="get-more ancLinks" href="<?php echo get_permalink(363); ?>">Читать все отзывы</a></p>
         </div>

@@ -115,7 +115,7 @@ Version: 1.0
         </div>
 
         <div class="mobile-phone-block">
-        	<?php echo getMeta('phone_main_page'); ?>
+        	<div><?php echo getMeta('phone_main_page'); ?></div>
         </div>
 
         <div class="menu">
