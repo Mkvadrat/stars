@@ -96,6 +96,7 @@ Version: 1.0
     width: auto;
     top: 36px;
     margin-left: -111px;
+    z-index: 10;
 }
 
 .header .menu {
@@ -405,10 +406,12 @@ form .right-side {
 }
 
 .offers {
-    bottom: 67px;
-    background: rgba(250, 235, 212, .9);
+    bottom: 0;
+    background: rgba(250, 235, 212, .9) url("images/home-bg-cat.png")no-repeat center center;
+    background-size: 100% auto;
     box-shadow: none;
     margin-top: 0;
+    position: relative;
 }
 
 .offers li a .title {
@@ -624,7 +627,7 @@ img {
 }
 
 .header-slider .title-slider {
-    top: 23vh;
+    top: 33vh;
 }
 
 .our-rooms {
@@ -955,12 +958,37 @@ img {
 .owl-carousel .owl-stage {
     height: 100%;
 }
+main {
+    padding-top: 85px;
+}
+.header-slider {
+    height: 80vh!important;
+}
 
-
-
-
-
-
+.main-index .header-slider .owl-dots {
+    bottom: 10px;
+}
+main .owl-carousel .owl-item::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 12%;
+    height: 68%;
+    background: url(images/zvezdniy-wm.png)no-repeat center bottom;
+    background-size: contain;
+    width: 100%;
+}
+.header-slider .title-slider span{
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 10px #000;
+    text-transform: none;
+    max-width: 580px;
+}
 
 
 

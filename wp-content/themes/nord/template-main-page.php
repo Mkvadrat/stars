@@ -120,51 +120,7 @@ get_header();
                     <h2 class="h4-title h4-title-mobile">
                         Номера пансионата
                     </h2>
-
-                    <!--<div class="block-for-half list-rooms">
-                        <div class="left-side">
-                            <div class="owl-carousel owl-theme owl-carousel-half">
-                                <?php
-                                foreach ($rooms_list as $list) {
-                                    $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($list->ID), 'full');
-                                    $qnt_rooms = get_post_meta($list->ID, 'quantity_single_page_rooms', $single = true);
-                                    ?>
-                                    <div>
-                                        <a href="<?php echo get_permalink($list->ID) ?>">
-                                            <figure>
-                                                <?php if (!empty($image_url)) { ?>
-                                                    <img src="<?php echo $image_url[0]; ?>"
-                                                         alt="<?php echo get_post_meta(get_post_thumbnail_id($list->ID), '_wp_attachment_image_alt', true); ?>">
-                                                <?php } else { ?>
-                                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/room-3.png">
-                                                <?php } ?>
-
-                                                <figcaption>
-                                                    <p><strong><?php echo $list->post_title; ?></strong>
-                                                        <?php if ($qnt_rooms == '1'){ ?>
-                                                        <b><?php echo $qnt_rooms; ?></b> номер</p>
-                                                    <?php } else { ?>
-                                                        <b><?php echo $qnt_rooms; ?></b> номера</p>
-                                                    <?php } ?>
-                                                </figcaption>
-                                            </figure>
-                                        </a>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <div class="right-side side-description">
-                            <div class="description-half">
-                                <h2 class="h4-title nom-pans">
-                                    Номера пансионата
-                                </h2>
-
-                                <a class="get-more ancLinks" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>-->
-
-                    <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
+                  <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
                 </div>
                 <!-- end our-rooms -->
             </div>
