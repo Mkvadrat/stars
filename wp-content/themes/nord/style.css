@@ -969,11 +969,11 @@ main {
     padding-top: 85px;
 }
 
-.header-slider {
-    height: 80vh !important;
+.home .header-slider {
+    height: 75vh !important;
 }
 
-.main-index .header-slider .owl-dots {
+.home .main-index .header-slider .owl-dots {
     bottom: 10px;
 }
 
@@ -988,7 +988,7 @@ main .owl-carousel .owl-item::before {
     width: 100%;
 }
 
-.header-slider .title-slider span {
+.home .header-slider .title-slider span {
     font-family: 'PhilosopherBold', sans-serif;
     font-weight: bold;
     font-size: 48px;
@@ -1018,6 +1018,57 @@ ul.mm-listview li a:hover {
     background-color: #77101D !important;
 }
 
+.h1-title-center{
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 36px;
+    text-align: center;
+    color: #7b0303;
+}
+
+.sub-text-block{
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1550px) {
     .header .menu .right-side .first-menu > li:last-child {
         right: 0;
@@ -1034,7 +1085,7 @@ ul.mm-listview li a:hover {
         padding: 0 20px;
     }
 
-    .header-slider {
+    .home .header-slider {
         height: 79vh !important;
     }
 
@@ -1060,7 +1111,7 @@ ul.mm-listview li a:hover {
         height: auto;
     }
 
-    .header-slider {
+    .home .header-slider {
         height: auto !important;
         top: 0;
         margin-bottom: 0;
@@ -1074,13 +1125,13 @@ ul.mm-listview li a:hover {
 }
 
 @media only screen and (max-width: 1060px) {
-    .header-slider .title-slider {
+    .home .header-slider .title-slider {
         width: 70%;
         margin-left: 15%;
         left: 0;
     }
 
-    .header-slider .title-slider span {
+    .home .header-slider .title-slider span {
         font-size: 1em;
         line-height: normal;
     }
@@ -1159,7 +1210,7 @@ ul.mm-listview li a:hover {
         display: block;
     }
 
-    .header-slider {
+    .home .header-slider {
         height: auto !important;
     }
 
@@ -1188,7 +1239,7 @@ ul.mm-listview li a:hover {
         margin-bottom: 20px;
     }
 
-    .header-slider .title-slider {
+    .home .header-slider .title-slider {
         top: 17vh;
     }
 }

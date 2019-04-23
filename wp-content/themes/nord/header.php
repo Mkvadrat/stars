@@ -64,7 +64,8 @@ Version: 1.0
 	<?php wp_head(); ?>
       <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
 </head>
-<body>
+
+  <body <?php body_class(); ?>>
 	<div id="page">
         <nav id="menu">
 			<?php
