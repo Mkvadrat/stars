@@ -38,18 +38,18 @@ get_header();
 		<?php				   
 			$term = get_queried_object();
 			$category_id = $term->term_id;
-			$category_code = get_option('category_'.$category_id.'_code_block_category_services');
-			echo $category_code;
+			$category_code = get_term_meta($category_id, 'code_block_category_services');
+			echo $category_code[0];
 		?>
         <!-- end offers -->
         
         <?php				   
-			$category_descr = get_option('category_'.$category_id.'_text_category_services');
-			echo $category_descr;
+			$category_descr = get_term_meta($category_id, 'text_category_services');
+			echo $category_descr[0];
 		?>
 
 		<?php				   
-			$category_descr = get_option('category_'.$category_id.'_text_mobile_category_services');
+			$category_descr = get_term_meta($category_id, 'text_mobile_category_services');
 			echo $category_descr;
 		?>
     </main>

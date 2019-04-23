@@ -33,8 +33,8 @@ get_header();
 		<?php				   
 			$term = get_queried_object();
 			$cat_id = $term->term_id;
-			$cat_code = get_option('rooms-list_'.$cat_id.'_code_block_category_rooms');
-			echo $cat_code;
+			$cat_code = get_term_meta($cat_id, 'code_block_category_rooms');
+			echo $cat_code[0];
 		?>
 
         <!-- end offers -->
@@ -42,22 +42,22 @@ get_header();
 		<?php				   
 			$term = get_queried_object();
 			$cat_id = $term->term_id;
-			$cat_description = get_option('rooms-list_'.$cat_id.'_text_mobile_category_rooms');
-			echo $cat_description;
+			$cat_description = get_term_meta($cat_id, 'text_mobile_category_rooms');
+			echo $cat_description[0];
 		?>
 		
 		<?php				   
 			$term = get_queried_object();
 			$cat_id = $term->term_id;
-			$cat_description = get_option('rooms-list_'.$cat_id.'_text_category_rooms');
-			echo $cat_description;
+			$cat_description = get_term_meta($cat_id, 'text_category_rooms');
+			echo $cat_description[0];
 		?>
 		
 		<?php				   
 			$term = get_queried_object();
 			$cat_id = $term->term_id;
-			$cat_description = get_option('rooms-list_'.$cat_id.'_text_general_category_rooms');
-			echo $cat_description;
+			$cat_description = get_term_meta($cat_id, 'text_general_category_rooms');
+			echo $cat_description[0];
 		?>
 	</main>
 	

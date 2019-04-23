@@ -93,16 +93,6 @@ Version: 1.0
 
     <!-- start header -->
 
-    <ul class="socials">
-        <li><a title="Карта" rel="nofollow" target="_blank" class="ancLinks" href="<?php echo getMeta('map_sl_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-1.png" alt=""></a></li>
-        <li><a title="Обратная связь" rel="nofollow" target="_blank" class="ancLinks" href="<?php echo getMeta('send_form_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-2.png" alt=""></a></li>
-        <li><a rel="nofollow" target="_blank" href="<?php echo getMeta('fb_main_page'); ?>"  title="Facebook"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-3.png" alt=""></a></li>
-        <li><a title="Вконтакте" target="_blank" rel="nofollow" href="<?php echo getMeta('vk_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-4.png" alt=""></a></li>
-        <li><a title="Одноклассники" target="_blank" rel="nofollow" href="<?php echo getMeta('ok_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-5.png" alt=""></a></li>
-        <li><a title="TripAdvisor" target="_blank" rel="nofollow" href="<?php echo getMeta('tripadvisor_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-7.png" alt=""></a></li>
-        <li><a title="Booking" target="_blank" rel="nofollow" href="<?php echo getMeta('booking_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-8.png" alt=""></a></li>
-        <li><a title="TopHotels" target="_blank" rel="nofollow" href="<?php echo getMeta('tophotels_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-9.png" alt=""></a></li>
-    </ul>
 
     <div id="top"></div>
 
@@ -115,7 +105,7 @@ Version: 1.0
         </div>
 
         <div class="mobile-phone-block">
-        	<?php echo getMeta('phone_main_page'); ?>
+        	<div><?php echo getMeta('phone_main_page'); ?></div>
         </div>
 
         <div class="menu">
