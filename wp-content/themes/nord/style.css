@@ -407,7 +407,7 @@ form .right-side {
 
 .offers {
     bottom: 0;
-    background: rgba(250, 235, 212, .9) url("images/home-bg-cat.png")no-repeat center center;
+    background: rgba(250, 235, 212, .9) url("images/home-bg-cat.png") no-repeat center center;
     background-size: 100% auto;
     box-shadow: none;
     margin-top: 0;
@@ -882,7 +882,7 @@ img {
 }
 
 
-.mobile-phone-block{
+.mobile-phone-block {
     background-color: #EAD9BE;
     border-radius: 15px;
     text-align: center;
@@ -893,6 +893,7 @@ img {
     margin: 0 10px 0;
     position: relative;
 }
+
 .mobile-phone-block div {
     border: 1px solid #C12A24;
     border-radius: 15px;
@@ -900,6 +901,7 @@ img {
     padding-top: 3px;
     position: relative;
 }
+
 .mobile-phone-block div a {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -911,6 +913,7 @@ img {
     padding: 0;
     margin: 0;
 }
+
 .mobile-phone-block div a:nth-child(2) {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -922,6 +925,7 @@ img {
     padding: 0;
     margin: 0;
 }
+
 .mobile-phone-block div span {
     background: #7b0808;
     border: 4px solid #a40000;
@@ -946,6 +950,7 @@ img {
     top: auto;
     left: -4px;
 }
+
 .mobile-phone-block div span:hover {
     background: #a40000;
     background-image: -webkit-linear-gradient(top, #530000 0%, #e00606 100%);
@@ -955,30 +960,35 @@ img {
 .mobile-phone-block div span img {
     display: none;
 }
+
 .owl-carousel .owl-stage {
     height: 100%;
 }
+
 main {
     padding-top: 85px;
 }
+
 .header-slider {
-    height: 80vh!important;
+    height: 80vh !important;
 }
 
 .main-index .header-slider .owl-dots {
     bottom: 10px;
 }
-main .owl-carousel .owl-item::before{
+
+main .owl-carousel .owl-item::before {
     content: '';
     display: block;
     position: absolute;
     bottom: 12%;
     height: 68%;
-    background: url(images/zvezdniy-wm.png)no-repeat center bottom;
+    background: url(images/zvezdniy-wm.png) no-repeat center bottom;
     background-size: contain;
     width: 100%;
 }
-.header-slider .title-slider span{
+
+.header-slider .title-slider span {
     font-family: 'PhilosopherBold', sans-serif;
     font-weight: bold;
     font-size: 48px;
@@ -990,93 +1000,90 @@ main .owl-carousel .owl-item::before{
     max-width: 580px;
 }
 
+#menu {
+    background: #8B2938;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 1550px){
+@media only screen and (max-width: 1550px) {
     .header .menu .right-side .first-menu > li:last-child {
         right: 0;
         top: 86px;
     }
+
     .socials {
         top: 185px;
     }
 }
-@media only screen and (max-width: 1250px){
+
+@media only screen and (max-width: 1250px) {
     .reviews-block .reviews-list {
         padding: 0 20px;
     }
+
     .header-slider {
-        height: 79vh!important;
+        height: 79vh !important;
     }
+
     main {
         padding-top: 115px;
     }
+
     .offers {
         bottom: 0;
     }
 }
-@media only screen and (max-width: 1150px){
+
+@media only screen and (max-width: 1150px) {
     .header .menu {
         display: none;
     }
+
     .description-half {
         width: 90%;
     }
+
     .tl-wrapper {
         height: auto;
     }
+
     .header-slider {
-        height: auto!important;
+        height: auto !important;
         top: 0;
         margin-bottom: 0;
     }
+
     .header .logo {
         top: 46px;
         margin-left: -80px;
     }
 
 }
-@media only screen and (max-width: 1060px){
+
+@media only screen and (max-width: 1060px) {
     .header-slider .title-slider {
         width: 70%;
         margin-left: 15%;
         left: 0;
     }
+
     .header-slider .title-slider span {
         font-size: 1em;
         line-height: normal;
     }
+
     .our-rooms ul li:nth-child(1), .our-rooms ul li:nth-child(2), .our-rooms ul li:nth-child(3),
     .our-rooms ul li:nth-child(4), .our-rooms ul li:nth-child(5), .our-rooms ul li:nth-child(6),
-    .our-rooms ul li:nth-child(7){
+    .our-rooms ul li:nth-child(7) {
         width: 100%;
     }
+
     .our-rooms ul li:nth-child(1) figcaption, .our-rooms ul li:nth-child(2) figcaption, .our-rooms ul li:nth-child(3) figcaption,
     .our-rooms ul li:nth-child(4) figcaption, .our-rooms ul li:nth-child(5) figcaption, .our-rooms ul li:nth-child(6) figcaption,
     .our-rooms ul li:nth-child(7) figcaption {
         height: auto;
     }
+
     .our-rooms ul li:nth-child(1) figcaption p, .our-rooms ul li:nth-child(2) figcaption p, .our-rooms ul li:nth-child(3) figcaption p,
     .our-rooms ul li:nth-child(4) figcaption p, .our-rooms ul li:nth-child(5) figcaption p, .our-rooms ul li:nth-child(6) figcaption p,
     .our-rooms ul li:nth-child(7) figcaption p {
@@ -1085,57 +1092,72 @@ main .owl-carousel .owl-item::before{
         padding: 10px;
     }
 }
-@media only screen and (max-width: 992px){
+
+@media only screen and (max-width: 992px) {
     .reviews-block ul {
-        display: flex!important;
+        display: flex !important;
     }
+
     .offers ul li a {
         width: 256px;
     }
+
     .footer-form-block .form textarea {
         margin: -3px 0 0;
     }
+
     form .left-side, form .right-side, .contact-block-1-1, .contact-block-1-2, .contacts-block p, .contacts-block-2 p, .contacts-block p, .contacts-block-2 p, .contacts-block a, .contacts-block-2 a {
         width: 100%;
         text-align: center;
     }
+
     .contacts-block-2 {
         flex-wrap: wrap;
     }
+
     .our-rooms .get-more {
         display: flex;
     }
+
     .i-take-block label:before, .i-take-block-form label:before {
         bottom: auto;
     }
 }
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
     .reviews-block ul {
-        display: flex!important;
+        display: flex !important;
     }
+
     .reviews-block .reviews-list li {
         width: 100%;
         height: auto;
         padding: 30px 10px;
     }
+
     .top__address .textwidget {
         width: 100%;
         padding: 0 20px;
     }
 }
-@media only screen and (max-width: 639px){
+
+@media only screen and (max-width: 639px) {
     .offers ul {
         display: block;
     }
+
     .header-slider {
-        height: auto!important;
+        height: auto !important;
     }
+
     .offers li {
         margin: 0;
     }
+
     .mobile-phone-block {
         display: none;
     }
+
     .header .logo {
         position: relative;
         margin: 11px 0 0 auto;
@@ -1145,23 +1167,28 @@ main .owl-carousel .owl-item::before{
         display: inline-block;
         float: right;
     }
+
     .mmenu {
         display: inline-block;
         position: relative;
         margin-bottom: 20px;
     }
+
     .header-slider .title-slider {
         top: 17vh;
     }
 }
-@media only screen and (max-width: 480px){
+
+@media only screen and (max-width: 480px) {
     .header-slider .title-slider {
         top: 13vh;
     }
+
     .header-slider .title-slider {
         font-size: 20px;
         line-height: normal;
     }
+
     .header-slider .title-slider {
         top: 9vh;
     }
