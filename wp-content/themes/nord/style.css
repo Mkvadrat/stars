@@ -1004,7 +1004,7 @@ main .owl-carousel .owl-item::before {
     background: #8B2938;
 }
 
-.h3-title-center{
+.h3-title-center {
     font-family: 'PhilosopherBold', sans-serif;
     font-weight: bold;
     font-size: 48px;
@@ -1012,6 +1012,10 @@ main .owl-carousel .owl-item::before {
     text-align: center;
     color: #7b0303;
     padding-top: 36px;
+}
+
+ul.mm-listview li a:hover {
+    background-color: #77101D !important;
 }
 
 @media only screen and (max-width: 1550px) {
@@ -1169,12 +1173,13 @@ main .owl-carousel .owl-item::before {
 
     .header .logo {
         position: relative;
-        margin: 11px 0 0 auto;
-        top: 0;
-        right: 5px;
+        margin: 0 0 0 auto;
+        top: 5px;
+        right: auto;
         left: auto;
         display: inline-block;
-        float: right;
+        float: none;
+        width: calc(100% - 80px);
     }
 
     .mmenu {
