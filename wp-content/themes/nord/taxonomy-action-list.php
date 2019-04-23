@@ -39,8 +39,8 @@ get_header();
 		<?php				   
 			$term = get_queried_object();
 			$cat_id = $term->term_id;
-			$cat_code = get_option('action-list_'.$cat_id.'_code_block_category_action');
-			echo $cat_code;
+			$cat_code = get_term_meta($cat_id, 'code_block_category_action');
+			echo $cat_code[0];
 		?>
 
         <!-- end offers -->
@@ -49,16 +49,16 @@ get_header();
             <h1 class="h1-title-center">
 				<?php				   
 					$cat_title_id = $term->term_id;
-					$cat_title = get_option('action-list_'.$cat_title_id.'_title_category_action');
-					echo $cat_title;
+					$cat_title = get_term_meta($cat_title_id, 'title_category_action');
+					echo $cat_title[0];
 				?>
 			</h1>
 			
 			<div class="text-block">
 				<?php				   
 					$cat_descr_id = $term->term_id;
-					$cat_descr= get_option('action-list_'.$cat_descr_id.'_text_category_action');
-					echo $cat_descr;
+					$cat_descr= get_term_meta($cat_descr_id, 'text_category_action');
+					echo $cat_descr[0];
 				?>
 			</div>
         <!-- start akcii-list -->

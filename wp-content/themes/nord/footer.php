@@ -27,6 +27,20 @@ Version: 1.0
     
     <div class="footer-block">
         <div class="max__wrap">
+<<<<<<< HEAD
+            <ul class="socials socials-mobile">
+                <li><a title="Карта" class="ancLinks" href="<?php echo getMeta('map_sl_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-1.png" alt=""></a></li>
+                <li><a title="Обратная связь" class="ancLinks" href="<?php echo getMeta('send_form_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-2.png" alt=""></a></li>
+                <li><a title="Facebook" href="<?php echo getMeta('fb_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-3.png" alt=""></a></li>
+                <li><a title="Вконтакте" href="<?php echo getMeta('vk_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-4.png" alt=""></a></li>
+                <li><a title="Одноклассники" href="<?php echo getMeta('ok_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-5.png" alt=""></a></li>
+                <li><a title="TripAdvisor" href="<?php echo getMeta('tripadvisor_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-7.png" alt=""></a></li>
+                <li><a title="Booking" href="<?php echo getMeta('booking_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-8.png" alt=""></a></li>
+                <li><a title="TopHotels" href="<?php echo getMeta('tophotels_main_page'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/soc-9.png" alt=""></a></li>
+            </ul>
+
+=======
+>>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
             <div class="contacts-block">
                 <div class="contact-block-1-1">
                     <p>298000, Россия, Республика Крым, г. Судак, ул. Ленина, 81</p>
