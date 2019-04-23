@@ -12,7 +12,6 @@ Version: 1.0
     font-style: normal;
     font-weight: normal
 }
-<<<<<<< HEAD
 
 .top__address {
     border-bottom: 2px solid #E7DCCB;
@@ -630,9 +629,6 @@ img{
 
 
 
-
-=======
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
 
 .top__address {
     border-bottom: 2px solid #E7DCCB;
@@ -1646,38 +1642,151 @@ ul.mm-listview li a:hover {
     line-height: 36px;
     text-align: center;
     color: #7b0303;
+    letter-spacing: 0;
 }
 
 .sub-text-block{
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+}
+.sub-text-block p{
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 26px;
     text-align: center;
     color: #666;
-    max-width: 520px;
-    margin: 0 auto;
+    margin-bottom: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.title-page{
+    padding: 51px 0 18px;
+}
+hr{
+    margin: 0;
+    border: none;
+    border-bottom: 3px solid #EAD9BE;
+    padding: 0;
+    height: 0;
+}
+.block-for-half .right-side img, .block-for-half .left-side img {
+    margin-bottom: 0;
+}
+.description .h1-title-center{
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47.98px;
+    text-align: left;
+    color: #7b0303;
+    margin-bottom: 22px;
+}
+.description p{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.95px;
+    text-align: left;
+    color: #666;
+}
+.description{
+    padding: 10px 71px;
+}
+.description p i{
+    font-style: italic;
+}
+.main-price .akcii-list p:last-child {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.main-price .akcii-list p:last-child a {
+    margin-left: 0;
+}
+.info-block {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.room-info{
+    padding: 60px 0;
+}
+.room-info h3{
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    color: #7b0303;
+    margin-bottom: 15px;
+}
+.room-info ul + h3{
+    padding-top: 49px;
+}
+.room-info ul li{
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    color: #666;
+    padding: 0;
+    margin-bottom: 26px;
+}
+.room-info ul li:before {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: 0;
+}
+.info-block ul {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+.info-block ul li {
+    width: 33.33%;
+    text-align: center;
+    padding-left: 0;
+}
+.info-block ul li:nth-child(1) {
+    text-align: left;
+}
+.info-block ul li:nth-child(3) {
+    text-align: right;
+}
+.info-block ul li .get-more{
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    text-transform: none;
+}
+.info-block ul li a{
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #7b0303;
+}
+.info-block ul li:nth-child(1) a{
+    background: url("/wp-content/themes/nord/images/download.png")no-repeat left center;
+    background-size: contain;
+    padding-left: 36px;
+}
+.block-for-half {
+    min-height: auto;
+}
+.header .logo {
+    margin-left: -80px;
+}
+.header .menu .right-side {
+    margin-right: 13%;
+}
+.header .menu a, .header .menu li a, .mm-listview li a {
+    pointer-events: none;
+}
 
 
 
@@ -1742,7 +1851,9 @@ ul.mm-listview li a:hover {
         top: 46px;
         margin-left: -80px;
     }
-
+    .description {
+        padding: 10px 20px;
+    }
 }
 
 @media only screen and (max-width: 1060px) {
@@ -1807,6 +1918,16 @@ ul.mm-listview li a:hover {
     .i-take-block label:before, .i-take-block-form label:before {
         bottom: auto;
     }
+
+    .description p:not(:last-child){
+        display: none;
+    }
+
+    .info-block ul li,
+    .info-block ul li:first-child {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1826,6 +1947,57 @@ ul.mm-listview li a:hover {
     }
 }
 
+@media only screen and (max-width: 640px) {
+    .main-price .block-for-half, .main-services .block-for-half {
+        display: flex;
+    }
+    .akcii-list li .left-side, .akcii-list li .right-side {
+        width: 100%;
+    }
+    .main-services .text-block, .main-price .text-block {
+        display: block;
+    }
+    .main-price .block-for-half .left-side{
+        order: 1;
+    }
+    .main-price .block-for-half .right-side{
+        order: 2;
+    }
+    .main-price .block-for-half:nth-child(2n+2) .left-side{
+        order: 2;
+    }
+    .main-price .block-for-half:nth-child(2n+2) .right-side{
+        order: 1;
+    }
+    .h1-title-center {
+        line-height: normal;
+    }
+    .akcii-list li .description p:last-child {
+        display: block;
+    }
+    .akcii-list li img {
+        padding-bottom: 0;
+    }
+    .description {
+        width: 100%;
+    }
+    .akcii-list li .description .get-more {
+        margin-bottom: 40px;
+    }
+    .akcii-list li .right-side .description p {
+        padding-bottom: 0;
+    }
+    .akcii-list li .left-side img {
+        padding-bottom: 0;
+    }
+    .main-price .info-block ul li:first-child, .main-price-in .info-block ul li:first-child {
+        padding-bottom: 0;
+    }
+    main {
+        padding-top: 213px;
+    }
+}
+
 @media only screen and (max-width: 639px) {
     .offers ul {
         display: block;
@@ -1839,11 +2011,7 @@ ul.mm-listview li a:hover {
         margin: 0;
     }
 
-    .mobile-phone-block {
-        display: none;
-    }
-
-    .header .logo {
+     .header .logo {
         position: relative;
         margin: 0 0 0 auto;
         top: 5px;
@@ -1851,7 +2019,7 @@ ul.mm-listview li a:hover {
         left: auto;
         display: inline-block;
         float: none;
-        width: calc(100% - 80px);
+        width: auto;
     }
 
     .mmenu {
@@ -1862,6 +2030,23 @@ ul.mm-listview li a:hover {
 
     .home .header-slider .title-slider {
         top: 17vh;
+    }
+    .header .logo a {
+        font-size: 16px;
+    }
+    .mobile-phone-block {
+        width: 144px;
+        height: 76px;
+    }
+    .mobile-phone-block div a, .mobile-phone-block div a:nth-child(2) {
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+    .mobile-phone-block div span {
+        width: calc(100% + 8px);
+        font-size: 10px;
+        height: 30px;
     }
 }
 
