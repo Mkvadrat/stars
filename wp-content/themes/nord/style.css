@@ -1781,9 +1781,7 @@ hr{
 .header .logo {
     margin-left: -80px;
 }
-.header .menu .right-side {
-    margin-right: 13%;
-}
+
 .header .menu a, .header .menu li a, .mm-listview li a {
     pointer-events: none;
 }
