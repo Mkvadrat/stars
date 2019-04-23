@@ -41,15 +41,9 @@ get_header();
             <div class="offers">
                 <?php echo get_post_meta(get_the_ID(), 'link_slider_main_page', $single = true) ?>
 
-<<<<<<< HEAD
-                <div class="owl-carousel owl-theme owl-carousel-half offers-slider">
-                    <?php echo get_post_meta(get_the_ID(), 'link_slider_mobile_main_page', $single = true) ?>
-                </div>
-=======
                 <!--<div class="owl-carousel owl-theme owl-carousel-half offers-slider">
                     <?php echo get_post_meta(get_the_ID(), 'link_slider_mobile_main_page', $single = true) ?>
                 </div>-->
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
             </div>
         </div>
 
@@ -126,55 +120,7 @@ get_header();
                     <h2 class="h4-title h4-title-mobile">
                         Номера пансионата
                     </h2>
-<<<<<<< HEAD
-
-                    <div class="block-for-half list-rooms">
-                        <div class="left-side">
-                            <div class="owl-carousel owl-theme owl-carousel-half">
-                                <?php
-                                foreach ($rooms_list as $list) {
-                                    $image_url = wp_get_attachment_image_src(get_post_thumbnail_id($list->ID), 'full');
-                                    $qnt_rooms = get_post_meta($list->ID, 'quantity_single_page_rooms', $single = true);
-                                    ?>
-                                    <div>
-                                        <a href="<?php echo get_permalink($list->ID) ?>">
-                                            <figure>
-                                                <?php if (!empty($image_url)) { ?>
-                                                    <img src="<?php echo $image_url[0]; ?>"
-                                                         alt="<?php echo get_post_meta(get_post_thumbnail_id($list->ID), '_wp_attachment_image_alt', true); ?>">
-                                                <?php } else { ?>
-                                                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/room-3.png">
-                                                <?php } ?>
-
-                                                <figcaption>
-                                                    <p><strong><?php echo $list->post_title; ?></strong>
-                                                        <?php if ($qnt_rooms == '1'){ ?>
-                                                        <b><?php echo $qnt_rooms; ?></b> номер</p>
-                                                    <?php } else { ?>
-                                                        <b><?php echo $qnt_rooms; ?></b> номера</p>
-                                                    <?php } ?>
-                                                </figcaption>
-                                            </figure>
-                                        </a>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                        <div class="right-side side-description">
-                            <div class="description-half">
-                                <h2 class="h4-title nom-pans">
-                                    Номера пансионата
-                                </h2>
-
-                                <a class="get-more ancLinks" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-
                     <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
-=======
-                  <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
                 </div>
                 <!-- end our-rooms -->
             </div>
@@ -266,26 +212,6 @@ get_header();
 
         <div class="block-for-half desctop-block">
             <div class="left-side side-description">
-<<<<<<< HEAD
-                <div class="description-half">
-                    <?php echo get_post_meta(get_the_ID(), 'wellness_center_main_page', $single = true); ?>
-                </div>
-            </div>
-            <div class="right-side">
-                <div class="owl-carousel owl-theme owl-carousel-half">
-                    <?php
-                    global $nggdb;
-                    $wellness_center_id = getNextGallery(get_the_ID(), 'gallery_wellness_center_main_page');
-                    $wellness_center_image = $nggdb->get_gallery($wellness_center_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
-                    if ($wellness_center_image) {
-                        foreach ($wellness_center_image as $image) {
-                            ?>
-                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
-                            <?php
-                        }
-                    }
-                    ?>
-=======
                 <div class="owl-carousel owl-theme owl-carousel-half">
                     <?php
                     global $nggdb;
@@ -304,33 +230,12 @@ get_header();
             <div class="right-side">
                 <div class="description-half">
                     <?php echo get_post_meta(get_the_ID(), 'wellness_center_main_page', $single = true); ?>
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
                 </div>
             </div>
         </div>
 
         <div class="block-for-half desctop-block">
             <div class="left-side">
-<<<<<<< HEAD
-                <div class="owl-carousel owl-theme owl-carousel-half">
-                    <?php
-                    global $nggdb;
-                    $cafe_id = getNextGallery(get_the_ID(), 'gallery_cafe_main_page');
-                    $cafe_image = $nggdb->get_gallery($cafe_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
-                    if ($cafe_image) {
-                        foreach ($cafe_image as $image) {
-                            ?>
-                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
-                            <?php
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="right-side side-description">
-                <div class="description-half">
-                    <?php echo get_post_meta(get_the_ID(), 'cafe_main_page', $single = true); ?>
-=======
                 <div class="description-half">
                     <?php echo get_post_meta(get_the_ID(), 'cafe_main_page', $single = true); ?>
                 </div>
@@ -349,33 +254,12 @@ get_header();
                         }
                     }
                     ?>
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
                 </div>
             </div>
         </div>
 
         <div class="block-for-half desctop-block">
             <div class="left-side side-description">
-<<<<<<< HEAD
-                <div class="description-half">
-                    <?php echo get_post_meta(get_the_ID(), 'about_us_main_page', $single = true); ?>
-                </div>
-            </div>
-            <div class="right-side">
-                <div class="owl-carousel owl-theme owl-carousel-half">
-                    <?php
-                    global $nggdb;
-                    $cafe_id = getNextGallery(get_the_ID(), 'gallery_about_us_main_page');
-                    $cafe_image = $nggdb->get_gallery($cafe_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
-                    if ($cafe_image) {
-                        foreach ($cafe_image as $image) {
-                            ?>
-                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
-                            <?php
-                        }
-                    }
-                    ?>
-=======
                 <div class="owl-carousel owl-theme owl-carousel-half">
                     <?php
                     global $nggdb;
@@ -394,29 +278,12 @@ get_header();
             <div class="right-side">
                 <div class="description-half">
                     <?php echo get_post_meta(get_the_ID(), 'about_us_main_page', $single = true); ?>
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
                 </div>
             </div>
         </div>
 
         <!-- end half-blocks -->
 
-<<<<<<< HEAD
-        <!-- start galery-title -->
-
-        <p class="h3-title-center">Последние фотографии из галереи</p>
-
-        <!-- end galery-title -->
-
-        <!-- start galery -->
-        <?php echo do_shortcode(get_post_meta(get_the_ID(), 'last_images_main_page', $single = true)); ?>
-        <!-- end galery -->
-
-        <!-- start see-all-photos-block -->
-
-        <div class="see-all-photos-block">
-            <a class="get-more ancLinks" href="<?php echo get_page_link(142); ?>">Смотреть все фотографии</a>
-=======
         <div class="home__galery-ch">
             <!-- start galery-title -->
             <p class="h3-title-center">Последние фотографии из галереи</p>
@@ -430,7 +297,6 @@ get_header();
                 <a class="get-more ancLinks" href="<?php echo get_page_link(142); ?>">Смотреть все фотографии</a>
             </div>
             <!-- end see-all-photos-block -->
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
         </div>
 
         <!-- start reviews-block -->
@@ -461,15 +327,11 @@ get_header();
                 <?php } ?>
             </ul>
 
-<<<<<<< HEAD
-            <div class="owl-carousel owl-theme owl-carousel-half reviews-slider">
-=======
             <!--<div class="owl-carousel owl-theme owl-carousel-half reviews-slider">
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
                 <?php
-                if (!empty($comments)) {
-                    foreach ($comments as $comment) {
-                        ?>
+            if (!empty($comments)) {
+                foreach ($comments as $comment) {
+                    ?>
                         <div>
                             <p class="white-paragraph">
                                 <strong><?php echo $comment->comment_author; ?></strong><?php echo mb_substr(strip_tags($comment->comment_content), 0, 152); ?></strong>
@@ -477,11 +339,7 @@ get_header();
                         </div>
                     <?php } ?>
                 <?php } ?>
-<<<<<<< HEAD
-            </div>
-=======
             </div>-->
->>>>>>> 6999020d4445ea8b88a9d632e1ce3a41a03d7b92
 
             <p><a class="get-more ancLinks" href="<?php echo get_permalink(363); ?>">Читать все отзывы</a></p>
         </div>
