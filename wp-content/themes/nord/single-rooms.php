@@ -38,11 +38,12 @@ get_header();
         <!-- end offers -->
 				
 		<?php echo get_post_meta( get_the_ID(), 'first_text_block_single_page_rooms', $single = true ) ?>
-		
-		<div class="text-block-underline">
+		<hr>
+		<div class="gallery-room">
             <div class="text-block">
                 <div class="block-galery">
                     <p class="h3-title">Фотографии номера</p>
+                    <p class="sub-text">Каждый номер с удобствами и двумя балконами.</p>
                     <ul class="galery-2">
 						<?php
 							global $nggdb;
@@ -60,7 +61,7 @@ get_header();
                 </div>
             </div>
         </div>
-				
+			<hr>
 		<?php echo get_post_meta( get_the_ID(), 'second_text_block_single_page_rooms', $single = true ) ?>
 	
 	</main>

@@ -603,31 +603,13 @@ form .right-side {
     background-image: linear-gradient(to bottom, #530000 0%, #e00606 100%);
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.seo__home .seo__img{
+.seo__home .seo__img {
     padding: 0 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .top__address {
@@ -1635,7 +1617,7 @@ ul.mm-listview li a:hover {
     background-color: #77101D !important;
 }
 
-.h1-title-center{
+.h1-title-center {
     font-family: 'PhilosopherBold', sans-serif;
     font-weight: bold;
     font-size: 48px;
@@ -1645,12 +1627,13 @@ ul.mm-listview li a:hover {
     letter-spacing: 0;
 }
 
-.sub-text-block{
+.sub-text-block {
     text-align: center;
     max-width: 520px;
     margin: 0 auto;
 }
-.sub-text-block p{
+
+.sub-text-block p {
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -1659,20 +1642,24 @@ ul.mm-listview li a:hover {
     color: #666;
     margin-bottom: 12px;
 }
-.title-page{
+
+.title-page {
     padding: 51px 0 18px;
 }
-hr{
+
+hr {
     margin: 0;
     border: none;
     border-bottom: 3px solid #EAD9BE;
     padding: 0;
     height: 0;
 }
+
 .block-for-half .right-side img, .block-for-half .left-side img {
     margin-bottom: 0;
 }
-.description .h1-title-center{
+
+.description .h1-title-center {
     font-family: 'PhilosopherBold', sans-serif;
     font-weight: bold;
     font-size: 40px;
@@ -1681,7 +1668,8 @@ hr{
     color: #7b0303;
     margin-bottom: 22px;
 }
-.description p{
+
+.description p {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -1689,28 +1677,36 @@ hr{
     text-align: left;
     color: #666;
 }
-.description{
+
+.description {
     padding: 10px 71px;
+    width: 100%;
 }
-.description p i{
+
+.description p i {
     font-style: italic;
 }
+
 .main-price .akcii-list p:last-child {
     text-align: left;
     padding-top: 0;
     padding-bottom: 0;
 }
+
 .main-price .akcii-list p:last-child a {
     margin-left: 0;
 }
+
 .info-block {
     border-bottom: none;
     margin-bottom: 0;
 }
-.room-info{
+
+.room-info {
     padding: 60px 0;
 }
-.room-info h3{
+
+.room-info h3 {
     font-family: 'PhilosopherBold', sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -1719,10 +1715,12 @@ hr{
     color: #7b0303;
     margin-bottom: 15px;
 }
-.room-info ul + h3{
+
+.room-info ul + h3 {
     padding-top: 49px;
 }
-.room-info ul li{
+
+.room-info ul li {
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -1732,28 +1730,34 @@ hr{
     padding: 0;
     margin-bottom: 26px;
 }
+
 .room-info ul li:before {
     position: relative;
     display: inline-block;
     margin-right: 10px;
     top: 0;
 }
+
 .info-block ul {
     padding-top: 34px;
     padding-bottom: 34px;
 }
+
 .info-block ul li {
     width: 33.33%;
     text-align: center;
     padding-left: 0;
 }
+
 .info-block ul li:nth-child(1) {
     text-align: left;
 }
+
 .info-block ul li:nth-child(3) {
     text-align: right;
 }
-.info-block ul li .get-more{
+
+.info-block ul li .get-more {
     background: none;
     border: none;
     border-radius: 0;
@@ -1761,7 +1765,8 @@ hr{
     height: auto;
     text-transform: none;
 }
-.info-block ul li a{
+
+.info-block ul li a {
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     text-decoration: underline;
@@ -1770,14 +1775,17 @@ hr{
     text-align: center;
     color: #7b0303;
 }
-.info-block ul li:nth-child(1) a{
-    background: url("/wp-content/themes/nord/images/download.png")no-repeat left center;
+
+.info-block ul li:nth-child(1) a {
+    background: url("/wp-content/themes/nord/images/download.png") no-repeat left center;
     background-size: contain;
     padding-left: 36px;
 }
+
 .block-for-half {
     min-height: auto;
 }
+
 .header .logo {
     margin-left: -80px;
 }
@@ -1786,15 +1794,106 @@ hr{
     pointer-events: none;
 }
 
+.main-price-in .akcii-list {
+    border-top: none;
+}
 
+.main-price-in .text-block-underline {
+    border-top: none;
+    border-bottom: none;
+}
 
+.main-price-in table th {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: left;
+    color: #666;
+    padding: 0;
+    vertical-align: top;
+}
 
+.main-price-in table {
+    width: 100%;
+}
 
+.main-price-in table th:last-child {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: right;
+    color: #7b0303;
+}
 
+.main-price-in table td {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    text-align: left;
+    color: #666;
+}
 
+.room-item hr {
+    margin: 24px 0 17px;
+}
 
+.main-price-in .akcii-list p:last-child {
+    text-align: left;
+    padding-bottom: 0;
+}
 
+.main-price-in .akcii-list p:last-child a {
+    margin-left: 0;
+    width: 100%;
+    max-width: 234px;
+}
 
+.gallery-room .h3-title {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 36px;
+    text-align: center;
+    color: #7b0303;
+}
+
+.gallery-room .sub-text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+}
+
+.dop-info .h3-title {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    color: #7b0303;
+}
+
+.dop-info p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    color: #666;
+}
+
+.dop-info p i {
+    font-style: italic;
+}
+
+.akcii-list li .left-side, .akcii-list li .right-side {
+    max-height: none;
+}
 
 
 @media only screen and (max-width: 1550px) {
@@ -1849,6 +1948,7 @@ hr{
         top: 46px;
         margin-left: -80px;
     }
+
     .description {
         padding: 10px 20px;
     }
@@ -1885,6 +1985,28 @@ hr{
         background-size: cover;
         padding: 10px;
     }
+
+    .akcii-list li .left-side, .akcii-list li .right-side {
+        width: 100%;
+        max-height: none;
+    }
+
+    .akcii-list li .right-side {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .akcii-list li .left-side {
+        order: 2;
+    }
+
+    .akcii-list li .right-side {
+        order: 1;
+    }
+
+    .main-price-in .akcii-list li {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1917,7 +2039,7 @@ hr{
         bottom: auto;
     }
 
-    .description p:not(:last-child){
+    .description p:not(:last-child) {
         display: none;
     }
 
@@ -1949,50 +2071,77 @@ hr{
     .main-price .block-for-half, .main-services .block-for-half {
         display: flex;
     }
+
     .akcii-list li .left-side, .akcii-list li .right-side {
         width: 100%;
     }
+
     .main-services .text-block, .main-price .text-block {
         display: block;
     }
-    .main-price .block-for-half .left-side{
+
+    .main-price .block-for-half .left-side {
         order: 1;
     }
-    .main-price .block-for-half .right-side{
+
+    .main-price .block-for-half .right-side {
         order: 2;
     }
-    .main-price .block-for-half:nth-child(2n+2) .left-side{
+
+    .main-price .block-for-half:nth-child(2n+2) .left-side {
         order: 2;
     }
-    .main-price .block-for-half:nth-child(2n+2) .right-side{
+
+    .main-price .block-for-half:nth-child(2n+2) .right-side {
         order: 1;
     }
+
     .h1-title-center {
         line-height: normal;
     }
+
     .akcii-list li .description p:last-child {
         display: block;
     }
+
     .akcii-list li img {
         padding-bottom: 0;
     }
+
     .description {
         width: 100%;
     }
+
     .akcii-list li .description .get-more {
         margin-bottom: 40px;
     }
+
     .akcii-list li .right-side .description p {
         padding-bottom: 0;
     }
+
     .akcii-list li .left-side img {
         padding-bottom: 0;
     }
+
     .main-price .info-block ul li:first-child, .main-price-in .info-block ul li:first-child {
         padding-bottom: 0;
     }
+
     main {
         padding-top: 213px;
+    }
+
+    .main-price-in .block-for-half {
+        display: flex;
+    }
+
+    .main-price-in .description {
+        width: 100% !important;
+    }
+
+    .galery-2 {
+        width: 100%;
     }
 }
 
@@ -2009,7 +2158,7 @@ hr{
         margin: 0;
     }
 
-     .header .logo {
+    .header .logo {
         position: relative;
         margin: 0 0 0 auto;
         top: 5px;
@@ -2029,18 +2178,22 @@ hr{
     .home .header-slider .title-slider {
         top: 17vh;
     }
+
     .header .logo a {
         font-size: 16px;
     }
+
     .mobile-phone-block {
         width: 144px;
         height: 76px;
     }
+
     .mobile-phone-block div a, .mobile-phone-block div a:nth-child(2) {
         font-size: 13px;
         letter-spacing: 0;
         line-height: normal;
     }
+
     .mobile-phone-block div span {
         width: calc(100% + 8px);
         font-size: 10px;
@@ -2060,5 +2213,13 @@ hr{
 
     .header-slider .title-slider {
         top: 9vh;
+    }
+
+    .main-price-in table th {
+        display: block;
+    }
+
+    .main-price-in table th:last-child {
+        text-align: left;
     }
 }
