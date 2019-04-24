@@ -138,7 +138,7 @@ get_header();
         </div>
         <!-- start half-blocks -->
 
-        <div class="block-for-half mobile-block">
+        <div class="block-for-half">
             <div class="left-side">
                 <div class="owl-carousel owl-theme owl-carousel-half">
                     <?php
@@ -156,91 +156,19 @@ get_header();
                 </div>
             </div>
             <div class="right-side side-description">
-                <div class="description-half">
-                    <?php echo get_post_meta(get_the_ID(), 'wellness_center_mobile_main_page', $single = true); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="block-for-half mobile-block block-for-half-mob">
-            <div class="left-side">
-                <div class="owl-carousel owl-theme owl-carousel-half">
-                    <?php
-                    global $nggdb;
-                    $cafe_id = getNextGallery(get_the_ID(), 'gallery_cafe_main_page');
-                    $cafe_image = $nggdb->get_gallery($cafe_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
-                    if ($cafe_image) {
-                        foreach ($cafe_image as $image) {
-                            ?>
-                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
-                            <?php
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="right-side side-description">
-                <div class="description-half">
-                    <?php echo get_post_meta(get_the_ID(), 'cafe_mobile_main_page', $single = true); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="block-for-half mobile-block block-for-half-mob">
-            <div class="left-side">
-                <div class="owl-carousel owl-theme owl-carousel-half">
-                    <?php
-                    global $nggdb;
-                    $cafe_id = getNextGallery(get_the_ID(), 'gallery_about_us_main_page');
-                    $cafe_image = $nggdb->get_gallery($cafe_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
-                    if ($cafe_image) {
-                        foreach ($cafe_image as $image) {
-                            ?>
-                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
-                            <?php
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="right-side side-description">
-                <div class="description-half">
-                    <?php echo get_post_meta(get_the_ID(), 'about_us_mobile_main_page', $single = true); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="block-for-half desctop-block">
-            <div class="left-side side-description">
-                <div class="owl-carousel owl-theme owl-carousel-half">
-                    <?php
-                    global $nggdb;
-                    $wellness_center_id = getNextGallery(get_the_ID(), 'gallery_wellness_center_main_page');
-                    $wellness_center_image = $nggdb->get_gallery($wellness_center_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
-                    if ($wellness_center_image) {
-                        foreach ($wellness_center_image as $image) {
-                            ?>
-                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
-                            <?php
-                        }
-                    }
-                    ?>
-                </div>
-            </div>
-            <div class="right-side">
                 <div class="description-half">
                     <?php echo get_post_meta(get_the_ID(), 'wellness_center_main_page', $single = true); ?>
                 </div>
             </div>
         </div>
 
-        <div class="block-for-half desctop-block">
-            <div class="left-side">
+        <div class="block-for-half">
+            <div class="left-side side-description">
                 <div class="description-half">
                     <?php echo get_post_meta(get_the_ID(), 'cafe_main_page', $single = true); ?>
                 </div>
             </div>
-            <div class="right-side side-description">
+            <div class="right-side">
                 <div class="owl-carousel owl-theme owl-carousel-half">
                     <?php
                     global $nggdb;
@@ -258,8 +186,8 @@ get_header();
             </div>
         </div>
 
-        <div class="block-for-half desctop-block">
-            <div class="left-side side-description">
+        <div class="block-for-half">
+            <div class="left-side">
                 <div class="owl-carousel owl-theme owl-carousel-half">
                     <?php
                     global $nggdb;
@@ -275,7 +203,7 @@ get_header();
                     ?>
                 </div>
             </div>
-            <div class="right-side">
+            <div class="right-side side-description">
                 <div class="description-half">
                     <?php echo get_post_meta(get_the_ID(), 'about_us_main_page', $single = true); ?>
                 </div>

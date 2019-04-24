@@ -1007,7 +1007,7 @@ form .right-side {
 .offers {
     bottom: 0;
     background: rgba(250, 235, 212, .9) url("images/home-bg-cat.png") no-repeat center center;
-    background-size: 100% auto;
+    background-size: cover;
     box-shadow: none;
     margin-top: 0;
     position: relative;
@@ -2048,6 +2048,16 @@ hr {
         width: 100%;
         text-align: center;
     }
+    .block-for-half .right-side, .block-for-half .left-side {
+        width: 100%;
+    }
+    .block-for-half .description-half p {
+        display: block;
+    }
+    .side-description{
+        order: 2;
+        margin-bottom: 50px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2198,6 +2208,9 @@ hr {
         width: calc(100% + 8px);
         font-size: 10px;
         height: 30px;
+    }
+    .galery li {
+        margin-bottom: 20px;
     }
 }
 
