@@ -34,61 +34,60 @@ get_header();
 			<?php echo get_post_meta( get_the_ID(), 'code_block_contacts_page', $single = true ); ?>
 			
 			<?php echo get_post_meta( get_the_ID(), 'main_text_contacts_page', $single = true ); ?>
-
+<hr>
         <div class="block-for-half contacts-block">
-            <div class="left-side">
-                <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ebe5bd35d8e6c7e7e3cdfa0c99df1a5b054b91c37b3e718a6812c32b58fb17a&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>-->
-				
-				<div class="map" id="maps" style="width:100%; height:600px"></div>
-				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.full" type="text/javascript"> </script>
-				<script type="text/javascript">
-						var myMap;
-						ymaps.ready(init);
-						function init()
-						{
-							ymaps.geocode('<?php echo get_post_meta( get_the_ID(), 'address_for_map_contacts_page', $single = true ); ?>', {
-								results: 1
-							}).then
-							(
-								function (res)
-								{
-									var firstGeoObject = res.geoObjects.get(0),
-										myMap = new ymaps.Map
-										("maps",
-											{
-												center: firstGeoObject.geometry.getCoordinates(),
-												zoom: 15,
-							controls: ["zoomControl", "fullscreenControl"]
-											}
-										);
-									var myPlacemark = new ymaps.Placemark
-									(
-										firstGeoObject.geometry.getCoordinates(),
-										{
-											iconContent: ''
-										},
-										{
-											preset: 'twirl#blueStretchyIcon'
-										}
-									);
-									myMap.geoObjects.add(myPlacemark);
-									myMap.controls.add('typeSelector');
-									myMap.behaviors.disable('scrollZoom');
-								},
-								function (err)
-								{
-									alert(err.message);
-								}
-							);
-						}
-				</script>
-				
-            </div>
-            
-			<?php echo get_post_meta( get_the_ID(), 'contacts_inf_contacts_page', $single = true ); ?>
-			
+                <?php echo get_post_meta( get_the_ID(), 'contacts_inf_contacts_page', $single = true ); ?>
+
         </div>
 
+         <div class="map-side">
+             <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ebe5bd35d8e6c7e7e3cdfa0c99df1a5b054b91c37b3e718a6812c32b58fb17a&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>-->
+
+             <div class="map" id="maps" style="width:100%; height:600px"></div>
+             <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.full" type="text/javascript"> </script>
+             <script type="text/javascript">
+                 var myMap;
+                 ymaps.ready(init);
+                 function init()
+                 {
+                     ymaps.geocode('<?php echo get_post_meta( get_the_ID(), 'address_for_map_contacts_page', $single = true ); ?>', {
+                         results: 1
+                     }).then
+                     (
+                         function (res)
+                         {
+                             var firstGeoObject = res.geoObjects.get(0),
+                                 myMap = new ymaps.Map
+                                 ("maps",
+                                     {
+                                         center: firstGeoObject.geometry.getCoordinates(),
+                                         zoom: 15,
+                                         controls: ["zoomControl", "fullscreenControl"]
+                                     }
+                                 );
+                             var myPlacemark = new ymaps.Placemark
+                             (
+                                 firstGeoObject.geometry.getCoordinates(),
+                                 {
+                                     iconContent: ''
+                                 },
+                                 {
+                                     preset: 'twirl#blueStretchyIcon'
+                                 }
+                             );
+                             myMap.geoObjects.add(myPlacemark);
+                             myMap.controls.add('typeSelector');
+                             myMap.behaviors.disable('scrollZoom');
+                         },
+                         function (err)
+                         {
+                             alert(err.message);
+                         }
+                     );
+                 }
+             </script>
+
+         </div>
     </main>
  
 <?php get_footer(); ?>

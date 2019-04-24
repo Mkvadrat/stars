@@ -1899,15 +1899,70 @@ hr {
     max-height: none;
 }
 
+.main-contacts .contacts-block {
+    border-top: none;
+}
+.header .menu {
+    width: calc(100% - 450px);
+}
+.main-contacts table{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.main-contacts .right-side{
+    width: 60%;
+    max-height: none;
+    display: block;
+}
+.main-contacts .left-side{
+    width: 40%;
+    max-height: none;
+}
+.main-contacts table td{
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    color: #644b31;
+    background: #F6F3E1;
+}
+.main-contacts table td:last-child{
+    text-align: right;
+}
 
-@media only screen and (max-width: 1550px) {
-    .header .menu .right-side .first-menu > li:last-child {
-        right: 0;
-        top: 86px;
-    }
 
-    .socials {
-        top: 185px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+    .header .menu a {
+        padding: 17px 5px;
     }
 }
 
@@ -1926,6 +1981,10 @@ hr {
 
     .offers {
         bottom: 0;
+    }
+
+    .header .menu a {
+        font-size: 12px;
     }
 }
 

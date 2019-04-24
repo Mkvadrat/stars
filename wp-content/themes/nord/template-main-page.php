@@ -117,10 +117,10 @@ get_header();
                         <?php } ?>
                     </ul>
 
-                    <h2 class="h4-title h4-title-mobile">
+                    <!--<h2 class="h4-title h4-title-mobile">
                         Номера пансионата
                     </h2>
-                    <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>
+                    <a class="get-more" href="<?php echo get_tag_link(5); ?>">Подробнее</a>-->
                 </div>
                 <!-- end our-rooms -->
             </div>
