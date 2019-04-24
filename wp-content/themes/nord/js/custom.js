@@ -46,7 +46,7 @@ $(document).ready(function () {
         items : 1,
         loop : true,
         touchDrag : true,
-        nav : true,
+        nav : false,
         navText : "",
         dots : false
     });
