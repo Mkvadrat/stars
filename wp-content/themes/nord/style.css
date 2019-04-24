@@ -29,6 +29,10 @@ Version: 1.0
     color: #fff;
 }
 
+.top__address .textwidget br{
+    display: none;
+}
+
 .top__address .textwidget a {
     font-weight: normal;
     font-size: 14px;
@@ -1929,7 +1933,10 @@ hr {
     .header .menu {
         display: none;
     }
-
+    .header-slider {
+        top: 0;
+        margin-bottom: 0;
+    }
     .description-half {
         width: 90%;
     }
@@ -2139,7 +2146,7 @@ hr {
     }
 
     main {
-        padding-top: 100px;
+        padding-top: 127px;
     }
 
     .main-price-in .block-for-half {
@@ -2152,6 +2159,13 @@ hr {
 
     .galery-2 {
         width: 100%;
+    }
+
+    .top__address .textwidget br {
+        display: block;
+    }
+    .top__address .textwidget {
+        padding: 0;
     }
 }
 
