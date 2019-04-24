@@ -209,6 +209,30 @@ get_header();
                 </div>
             </div>
         </div>
+        
+        <div class="block-for-half">
+            <div class="left-side side-description">
+                <div class="description-half">
+                    <?php echo get_post_meta(get_the_ID(), 'medical_center_main_page', $single = true); ?>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="owl-carousel owl-theme owl-carousel-half">
+                    <?php
+                    global $nggdb;
+                    $cafe_id = getNextGallery(get_the_ID(), 'gallery_medical_center_main_page');
+                    $cafe_image = $nggdb->get_gallery($cafe_id[0]["ngg_id"], 'sortorder', 'ASC', false, 0, 0);
+                    if ($cafe_image) {
+                        foreach ($cafe_image as $image) {
+                            ?>
+                            <div><img src="<?php echo $image->imageURL; ?>" alt="<?php echo $image->alttext; ?>"></div>
+                            <?php
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
 
         <!-- end half-blocks -->
 
