@@ -22,8 +22,7 @@ get_header();
 					if($slider_image){
 						foreach($slider_image as $image) {
 					?>
-						<div>
-							<img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="<?php echo esc_attr($image->alttext); ?>">
+						<div style="background-image: url('<?php echo nextgen_esc_url($image->imageURL); ?>')">
 						</div>
 					<?php
 						}
@@ -35,15 +34,15 @@ get_header();
 			
 			<?php echo get_post_meta( get_the_ID(), 'main_text_contacts_page', $single = true ); ?>
 <hr>
-        <div class="block-for-half contacts-block">
+        <div class="block-for-half contacts-block"><div class="text-block">
                 <?php echo get_post_meta( get_the_ID(), 'contacts_inf_contacts_page', $single = true ); ?>
-
+        </div>
         </div>
 
          <div class="map-side">
              <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ebe5bd35d8e6c7e7e3cdfa0c99df1a5b054b91c37b3e718a6812c32b58fb17a&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>-->
 
-             <div class="map" id="maps" style="width:100%; height:600px"></div>
+             <div class="map" id="maps" style="width:100%; height:560px"></div>
              <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.full" type="text/javascript"> </script>
              <script type="text/javascript">
                  var myMap;
@@ -87,6 +86,9 @@ get_header();
                  }
              </script>
 
+         </div>
+         <div class="contact-gallery"><?php echo do_shortcode(get_post_meta(get_the_ID(), 'last_images_contacts_page', $single = true)); ?>
+             </div>
          </div>
     </main>
  

@@ -29,7 +29,7 @@ Version: 1.0
     color: #fff;
 }
 
-.top__address .textwidget br{
+.top__address .textwidget br {
     display: none;
 }
 
@@ -1581,14 +1581,14 @@ main {
 }
 
 main .owl-carousel .owl-item::before {
-    content: '';
+    /*content: '';
     display: block;
     position: absolute;
     bottom: 12%;
     height: 68%;
     background: url(images/zvezdniy-wm.png) no-repeat center bottom;
     background-size: contain;
-    width: 100%;
+    width: 100%;*/
 }
 
 .home .header-slider .title-slider span {
@@ -1901,24 +1901,30 @@ hr {
 
 .main-contacts .contacts-block {
     border-top: none;
+    margin-bottom: 51px;
 }
+
 .header .menu {
     width: calc(100% - 450px);
 }
-.main-contacts table{
+
+.main-contacts table {
     width: 100%;
     margin-bottom: 5px;
 }
-.main-contacts .right-side{
+
+.main-contacts .right-side {
     width: 60%;
     max-height: none;
     display: block;
 }
-.main-contacts .left-side{
+
+.main-contacts .left-side {
     width: 40%;
     max-height: none;
 }
-.main-contacts table td{
+
+.main-contacts table td {
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-size: 18px;
@@ -1926,38 +1932,203 @@ hr {
     text-align: left;
     color: #644b31;
     background: #F6F3E1;
+    padding: 0 23px;
 }
-.main-contacts table td:last-child{
+
+.main-contacts table td:last-child {
     text-align: right;
 }
 
+.main-contacts table tr:first-child td {
+    text-align: left;
+    padding-top: 11px;
+}
 
+.main-contacts table tr:last-child td {
+    padding-bottom: 13px;
+}
 
+.home .header-slider {
+    height: 547px !important;
+    top: 0;
+    margin: 0;
+}
 
+.block-header-slider .owl-carousel .owl-item,
+.block-header-slider .owl-carousel .owl-item div {
+    height: 100%;
+}
 
+.owl-carousel .owl-item div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.header-slider .title-slider {
+    top: 0;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 100%;
+}
 
+.header-slider .owl-dot.active span {
+    background-color: #000 !important;
+}
 
+.header-slider {
+    top: 0;
+    margin-bottom: 0;
+    height: 260px !important;
+}
 
+.owl-carousel .owl-item,
+.owl-carousel .owl-item div {
+    height: 100%;
+}
 
+.narrow-header-slider.owl-theme .owl-nav, .owl-theme .owl-nav {
+    margin-top: -20px !important;
+}
 
+.main-contacts .contacts-block .description-half .h4-title {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    color: #7b0303;
+    padding-top: 0;
+}
 
+.main-contacts .contacts-block .description-half {
+    width: 100%;
+    height: 100%;
+    padding-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
 
+.main-contacts .contacts-block .text-block {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.main-contacts .left-side {
+    width: 30%;
+}
 
+.main-contacts .right-side {
+    width: 70%;
+    padding-top: 55px;
+}
 
+.main-contacts table.last {
+    margin-bottom: 0;
+}
 
+.main-contacts table.last tr:first-child td {
+    padding-top: 36px;
+    padding-bottom: 28px;
+}
 
+.main-contacts table.last tr:last-child td {
+    padding-bottom: 41px;
+    padding-top: 28px;
+}
 
+.contact-gallery {
+    padding: 46px 0;
+}
 
+.main-about .title-page {
+    margin-bottom: 35px;
+}
 
+.about-img {
+    padding: 0 15px;
+}
 
+.main-about .about-text p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    color: #666;
+}
 
+.main-about .about-text {
+    padding-top: 62px;
+    padding-bottom: 34px;
+}
 
+.img-about-block .text-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.img-about-block .text-block img {
+    width: 49%;
+    height: 100%;
+}
 
+.main-akcii .title-page {
+    margin-bottom: 35px;
+}
 
+.text-block.akcii-text {
+    max-width: 1210px;
+}
 
+.akcii-text .akcii-list li {
+    border-radius: 4px;
+}
+
+.akcii-text .akcii-list li .left-side {
+    width: 49%;
+}
+
+.akcii-text .akcii-list li .right-side {
+    width: 51%;
+    background: #F7F4E2;
+}
+
+.akcii-text .akcii-list li .left-side img {
+    display: block;
+}
+
+.akcii-text .akcii-list li .right-side .description .h3-title {
+    font-family: 'PhilosopherBold', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    color: #7b0303;
+}
+
+.akcii-text .akcii-list li .right-side .description p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    color: #644b31;
+}
+
+.akcii-text .akcii-list li .get-more {
+    margin-left: 0;
+}
+
+.akcii-text .akcii-list li:last-child {
+    margin-bottom: 0;
+}
 
 
 @media only screen and (max-width: 1400px) {
@@ -1971,18 +2142,6 @@ hr {
         padding: 0 20px;
     }
 
-    .home .header-slider {
-        height: 79vh !important;
-    }
-
-    main {
-        padding-top: 115px;
-    }
-
-    .offers {
-        bottom: 0;
-    }
-
     .header .menu a {
         font-size: 12px;
     }
@@ -1992,22 +2151,18 @@ hr {
     .header .menu {
         display: none;
     }
+
     .header-slider {
         top: 0;
         margin-bottom: 0;
     }
+
     .description-half {
         width: 90%;
     }
 
     .tl-wrapper {
         height: auto;
-    }
-
-    .home .header-slider {
-        height: auto !important;
-        top: 0;
-        margin-bottom: 0;
     }
 
     .header .logo {
@@ -2018,19 +2173,14 @@ hr {
     .description {
         padding: 10px 20px;
     }
+
+    main {
+        padding-top: 114px;
+    }
 }
 
 @media only screen and (max-width: 1060px) {
-    .home .header-slider .title-slider {
-        width: 70%;
-        margin-left: 15%;
-        left: 0;
-    }
 
-    .home .header-slider .title-slider span {
-        font-size: 1em;
-        line-height: normal;
-    }
 
     .our-rooms ul li:nth-child(1), .our-rooms ul li:nth-child(2), .our-rooms ul li:nth-child(3),
     .our-rooms ul li:nth-child(4), .our-rooms ul li:nth-child(5), .our-rooms ul li:nth-child(6),
@@ -2073,6 +2223,17 @@ hr {
     .main-price-in .akcii-list li {
         flex-direction: column;
     }
+
+    .akcii-text .akcii-list li .left-side,
+    .akcii-text .akcii-list li .right-side {
+        width: 100%;
+    }
+
+    .akcii-text .akcii-list li .right-side .description {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2114,15 +2275,65 @@ hr {
         width: 100%;
         text-align: center;
     }
+
     .block-for-half .right-side, .block-for-half .left-side {
         width: 100%;
     }
+
     .block-for-half .description-half p {
         display: block;
     }
-    .side-description{
+
+    .side-description {
         order: 2;
         margin-bottom: 50px;
+    }
+
+    .main-contacts .left-side {
+        order: 1;
+        margin-bottom: 0;
+    }
+
+    .main-contacts .right-side {
+        order: 2;
+    }
+
+    .main-contacts .contacts-block .description-half > div {
+        width: 100%;
+    }
+
+    .main-contacts .contacts-block .description-half > div:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    .akcii-text .description p:not(:last-child) {
+        display: block;
+    }
+
+    .header .logo {
+        position: relative;
+        margin: 0 0 0 auto;
+        top: 6px;
+        right: auto;
+        left: auto;
+        display: inline-block;
+        float: none;
+        width: auto;
+    }
+
+    .mmenu {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 18px;
+        margin-top: 18px;
+    }
+
+    .mobile-phone-block {
+        margin-bottom: -17px;
+    }
+
+    main {
+        padding-top: 97px;
     }
 }
 
@@ -2140,6 +2351,16 @@ hr {
     .top__address .textwidget {
         width: 100%;
         padding: 0 20px;
+    }
+
+    .home .header-slider {
+        height: 400px !important;
+    }
+
+    .home .header-slider .title-slider span {
+        font-size: 39px;
+        line-height: normal;
+        max-width: 100%;
     }
 }
 
@@ -2205,7 +2426,7 @@ hr {
     }
 
     main {
-        padding-top: 127px;
+        padding-top: 118px;
     }
 
     .main-price-in .block-for-half {
@@ -2223,8 +2444,46 @@ hr {
     .top__address .textwidget br {
         display: block;
     }
+
     .top__address .textwidget {
         padding: 0;
+    }
+
+    .main-contacts .contacts-block .description-half p a {
+        text-align: center;
+    }
+
+    .main-contacts table td {
+        display: block;
+    }
+
+    .main-contacts table td:last-child {
+        text-align: left;
+    }
+
+    .main-contacts table.last tr:last-child td:last-child {
+        display: none;
+    }
+
+    .contact-gallery .galery li {
+        width: 100%;
+    }
+
+    .img-about-block .text-block img {
+        width: 100%;
+    }
+
+    .img-about-block .text-block img + img {
+        margin-top: 30px;
+    }
+
+    .akcii-text .akcii-list li .right-side .description p {
+        display: block;
+    }
+
+    .akcii-text .akcii-list li .right-side .description {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -2234,32 +2493,16 @@ hr {
     }
 
     .home .header-slider {
-        height: auto !important;
+        height: 300px !important;
     }
 
     .offers li {
         margin: 0;
     }
 
-    .header .logo {
-        position: relative;
-        margin: 0 0 0 auto;
-        top: 5px;
-        right: auto;
-        left: auto;
-        display: inline-block;
-        float: none;
-        width: auto;
-    }
 
-    .mmenu {
-        display: inline-block;
-        position: relative;
-        margin-bottom: 20px;
-    }
-
-    .home .header-slider .title-slider {
-        top: 80px;
+    .home .header-slider .title-slider span {
+        font-size: 30px;
     }
 
     .header .logo a {
@@ -2282,24 +2525,20 @@ hr {
         font-size: 10px;
         height: 30px;
     }
+
     .galery li {
         margin-bottom: 20px;
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .header-slider .title-slider {
-        top: 13vh;
-    }
+
 
     .header-slider .title-slider {
         font-size: 20px;
         line-height: normal;
     }
 
-    .header-slider .title-slider {
-        top: 9vh;
-    }
 
     .main-price-in table th {
         display: block;

@@ -31,7 +31,7 @@ Version: 1.0
             <div class="contacts-block">
                 <div class="contact-block-1-1">
                     <p>298000, Россия, Республика Крым, г. Судак, ул. Ленина, 81</p>
-                    <p>Тел/факс: <a href="tel:3656634484"(36566) 34484</a>, Почта: <a href="mailto:star-sudak@yandex.ru">star-sudak@yandex.ru</a></p>
+                    <p>Тел/факс: +7 (978) 082-60-18 (Viber, WhatsApp), Почта: <a href="mailto:star-sudak@yandex.ru">star-sudak@yandex.ru</a></p>
                 </div>
                 <div class="contact-block-1-2">
                     <p><a href="/private-policy">Политика конфиденциальности</a></p>

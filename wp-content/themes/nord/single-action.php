@@ -23,8 +23,7 @@ get_header();
 				if($slider_image){
 					foreach($slider_image as $image) {
 				?>
-					<div>
-						<img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="<?php echo esc_attr($image->alttext); ?>">
+					<div style="background-image: url('<?php echo nextgen_esc_url($image->imageURL); ?>')">
 					</div>
 				<?php
 					}
@@ -33,7 +32,7 @@ get_header();
 		</div>
 
         <!-- end top slider -->
-		
+
         <!-- start offers -->
 		<?php
 			$get_cat_inf = get_the_terms( get_the_ID(), 'action-list' );
@@ -42,12 +41,12 @@ get_header();
 			echo $cat_code;
 		?>
         <!-- end offers -->
-		
-		<div class="text-block display-mobile">
+
+		<div class="text-block title-page">
             <h1 class="h1-title-center"><?php the_title(); ?></h1>
 		</div>
-		
-        <div class="text-block display-mobile">
+
+        <div class="sub-text-block">
             <?php echo get_post_meta( get_the_ID(), 'text_action_page', $single = true ); ?>
 		</div>
     </main>

@@ -23,8 +23,7 @@ get_header();
                 if ($slider_image) {
                     foreach ($slider_image as $image) {
                         ?>
-                        <div>
-                            <img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="">
+                        <div style="background-image: url('<?php echo nextgen_esc_url($image->imageURL); ?>');">
                             <?php echo html_entity_decode($image->description); ?>
                         </div>
                         <?php

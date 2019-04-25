@@ -23,8 +23,7 @@ get_header();
 				if($slider_image){
 					foreach($slider_image as $image) {
 				?>
-					<div>
-						<img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="<?php echo esc_attr($image->alttext); ?>">
+					<div style="background-image: url('<?php echo nextgen_esc_url($image->imageURL); ?>')">
 					</div>
 				<?php
 					}
@@ -45,7 +44,7 @@ get_header();
 
         <!-- end offers -->
 
-        <div class="text-block">
+        <div class="text-block title-page">
             <h1 class="h1-title-center">
 				<?php				   
 					$cat_title_id = $term->term_id;
@@ -53,14 +52,9 @@ get_header();
 					echo $cat_title[0];
 				?>
 			</h1>
-			
-			<div class="text-block">
-				<?php				   
-					$cat_descr_id = $term->term_id;
-					$cat_descr= get_term_meta($cat_descr_id, 'text_category_action');
-					echo $cat_descr[0];
-				?>
-			</div>
+        </div>
+
+			<div class="text-block akcii-text">
         <!-- start akcii-list -->
 
 		<?php
