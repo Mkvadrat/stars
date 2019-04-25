@@ -1600,7 +1600,7 @@ main .owl-carousel .owl-item::before {
     color: #fff;
     text-shadow: 0 1px 10px #000;
     text-transform: none;
-    max-width: 580px;
+    max-width: 640px;
 }
 
 #menu {

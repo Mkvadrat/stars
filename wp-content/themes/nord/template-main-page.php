@@ -24,9 +24,8 @@ get_header();
                     foreach ($slider_image as $image) {
                         ?>
                         <div>
-                            <img src="<?php echo nextgen_esc_url($image->imageURL); ?>"
-                                 alt="<?php echo esc_attr($image->alttext); ?>">
-                            <p class="title-slider"><span><?php echo esc_attr($image->alttext); ?></span></p>
+                            <img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="">
+                            <?php echo html_entity_decode($image->description); ?>
                         </div>
                         <?php
                     }
