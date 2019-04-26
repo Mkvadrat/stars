@@ -2130,6 +2130,102 @@ hr {
     margin-bottom: 0;
 }
 
+.main-services .title-page {
+    margin-bottom: 35px;
+}
+
+.services-text {
+    padding-top: 42px;
+    padding-bottom: 23px;
+}
+
+.services-text p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    color: #666;
+}
+
+.main-services .block-for-half .right-side, .main-services .block-for-half .left-side {
+    overflow: hidden;
+}
+
+.main-booking .title-page {
+    margin-bottom: 35px;
+}
+
+.pre-text {
+    padding-top: 18px;
+}
+
+.pre-text p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #666;
+    padding-bottom: 27px;
+}
+
+.main-booking .paragraph-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 31px;
+}
+
+.main-booking .paragraph-button a {
+    width: 318px;
+}
+
+#booking-form-online p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #666;
+    padding-bottom: 12px;
+}
+
+#booking-form-online {
+    padding-top: 37px;
+}
+
+#booking-form-online p.last-child {
+    text-align: left;
+    padding-top: 17px;
+    margin-bottom: 27px;
+}
+
+.button-booking {
+    padding-top: 41px;
+    padding-bottom: 41px;
+}
+
+.button-booking p,
+.button-booking ul li {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    color: #666;
+    padding-bottom: 6px;
+}
+
+.button-booking ul li {
+    padding-bottom: 0;
+}
+
+.button-booking .pb {
+    margin-bottom: 32px;
+}
+
 
 @media only screen and (max-width: 1400px) {
     .header .menu a {
@@ -2335,6 +2431,11 @@ hr {
     main {
         padding-top: 97px;
     }
+
+    .main-booking .paragraph-button a {
+        display: flex;
+        margin: 0 10px !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2361,6 +2462,11 @@ hr {
         font-size: 39px;
         line-height: normal;
         max-width: 100%;
+    }
+
+    .main-booking .paragraph-button a {
+        width: 100%;
+        margin: 10px !important;
     }
 }
 
