@@ -2226,6 +2226,226 @@ hr {
     margin-bottom: 32px;
 }
 
+#faq-filter {
+    margin-bottom: 35px;
+    position: relative;
+    min-height: 20px !important;
+    height: auto
+}
+
+#faq-filter ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    z-index: 9999
+}
+
+#faq-filter ul li {
+    float: left;
+    padding: 8px 18px;
+    webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    -ms-transition-duration: .4s;
+    transition-duration: .4s
+}
+
+#faq-filter ul li.active {
+    position: relative
+}
+
+#faq-filter ul li a:hover {
+    text-decoration: none
+}
+
+.accordion {
+    float: left;
+    width: 100%
+}
+
+.faq {
+    width: 100%;
+    float: left
+}
+
+.faq .accordion-group {
+    position: relative;
+    display: block
+}
+
+.accordion .wpb_text_column {
+    margin-bottom: 0 !important
+}
+
+.accordion p:first-child {
+    margin-top: 0
+}
+
+.accordion.style_1 .accordion-group {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    margin-bottom: 10px;
+    border-bottom: none
+}
+
+.accordion.style_1 .accordion-heading .accordion-toggle {
+    position: relative;
+    padding: 15px 55px
+}
+
+.accordion.style_1 .accordion-heading .accordion-toggle:before {
+    background-image: url(img/plus.png);
+    background-position: center center;
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #ebebeb;
+    color: #ccc;
+    font-size: 16px;
+    width: 40px;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    -ms-transition-duration: .4s;
+    transition-duration: .4s
+}
+
+.accordion.style_1 .accordion-heading.in_head .accordion-toggle:before {
+    background-image: url(img/minus.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: ""
+}
+
+.accordion.style_1 .accordion-inner {
+    border-top: none;
+    padding: 1px 55px;
+    padding-bottom: 0;
+    float: left;
+    padding-right: 0
+}
+
+.accordion.style_2 .accordion-group {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    margin-bottom: 20px;
+    border-bottom: none
+}
+
+.accordion.style_2 .accordion-heading .accordion-toggle {
+    position: relative;
+    padding: 15px 70px
+}
+
+.accordion.style_2 .accordion-heading .accordion-toggle:before {
+    background-image: url(img/plus.png);
+    background-position: center center;
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    text-align: center;
+    background-color: #fff;
+    color: #ccc;
+    font-size: 16px;
+    width: 32px;
+    line-height: 40px;
+    height: 32px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    -ms-transition-duration: .4s;
+    transition-duration: .4s
+}
+
+.accordion.style_2 .accordion-heading.in_head .accordion-toggle:before {
+    background-image: url(img/minus.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: ""
+}
+
+.accordion.style_2 .accordion-heading.in_head .accordion-toggle {
+    color: #222
+}
+
+.accordion.style_2 .accordion-inner {
+    border-top: none;
+    padding: 20px 15px;
+    padding-bottom: 10px;
+    float: left
+}
+
+.accordion.style_3 .accordion-group {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    margin-bottom: 10px;
+    border-bottom: none
+}
+
+.accordion.style_3 .accordion-heading .accordion-toggle {
+    position: relative;
+    padding: 8px 45px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase
+}
+
+.accordion.style_3 .accordion-heading .accordion-toggle:before {
+    background-image: url(img/plus.png);
+    background-position: center center;
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    text-align: center;
+    background-color: #222;
+    color: #ccc;
+    font-size: 16px;
+    width: 20px;
+    line-height: 20px;
+    height: 20px;
+    -webkit-transition-duration: .4s;
+    -moz-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    -ms-transition-duration: .4s;
+    transition-duration: .4s
+}
+
+.accordion.style_3 .accordion-heading.in_head .accordion-toggle:before {
+    background-image: url(img/minus.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: ""
+}
+
+.accordion.style_3 .accordion-heading.in_head .accordion-toggle {
+    color: #222
+}
+
+.accordion.style_3 .accordion-inner {
+    border-top: none;
+    padding: 20px 15px;
+    padding-bottom: 10px;
+    float: left
+}
 
 @media only screen and (max-width: 1400px) {
     .header .menu a {
