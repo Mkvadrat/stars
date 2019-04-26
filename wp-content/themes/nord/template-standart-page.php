@@ -24,8 +24,7 @@ get_header();
 				if($slider_image){
 					foreach($slider_image as $image) {
 				?>
-					<div>
-						<img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="<?php echo esc_attr($image->alttext); ?>">
+					<div style="background-image: url('<?php echo nextgen_esc_url($image->imageURL); ?>')">
 					</div>
 				<?php
 					}
@@ -34,16 +33,17 @@ get_header();
 		</div>
 
         <!-- end top slider -->
-		
-        <!-- start offers -->
-			<?php echo get_post_meta( get_the_ID(), 'code_block_standart_page', $single = true ); ?>
-        <!-- end offers -->
-		
-		<div class="text-block">
+        <div class="text-block title-page">
             <h1 class="h1-title-center"><?php the_title(); ?></h1>
-		</div>
-		
-        <div class="text-block">
+        </div>
+        <hr>
+        <!-- start offers -->
+        <?php echo get_post_meta( get_the_ID(), 'code_block_standart_page', $single = true ); ?>
+        <!-- end offers -->
+
+		<hr>
+
+        <div class="text-block open-text-block">
             <?php echo get_post_meta( get_the_ID(), 'text_standart_page', $single = true ); ?>
 		</div>
     </main>
