@@ -23,8 +23,7 @@ get_header();
 				if($slider_image){
 					foreach($slider_image as $image) {
 				?>
-					<div>
-						<img src="<?php echo nextgen_esc_url($image->imageURL); ?>" alt="<?php echo esc_attr($image->alttext); ?>">
+					<div style="background-image: url('<?php echo nextgen_esc_url($image->imageURL); ?>')">
 					</div>
 				<?php
 					}
@@ -36,9 +35,9 @@ get_header();
 				
 		<?php echo get_post_meta( get_the_ID(), 'text_reviews_page', $single = true ); ?>
 		
-		<div class="footer-form-block">
+		<div class="footer-form-block reviews-form">
             <p class="white-title">Добавить отзыв</p>
-            <p class="white-paragraph">Отдых в Партените Крым: отзывы наших отдыхающих</p>
+            <p class="white-paragraph">Отдых в Судаке Крым: отзывы наших отдыхающих</p>
 			<div id="respond">
             <form class="form reviews-form" id="commentform">
                 <input type="text" name="author" id="author" placeholder="Ваше имя">
@@ -52,7 +51,7 @@ get_header();
         </div>
 		
 		<div class="text-block reviews-list">
-            <p class="h3-title-center">Отдых в Партените – отзывы отеля «Норд»</p>
+            <p class="h3-title-center">Отдых в Судаке – отзывы пансионата «Звездный»</p>
 		<?php 
 		
 			define( 'DEFAULT_COMMENTS_PER_PAGE', $GLOBALS['wp_query']->query_vars['comments_per_page']);
