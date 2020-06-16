@@ -40,7 +40,7 @@ Version: 1.0
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo esc_url( get_template_directory_uri() ); ?>/apple-icon-60x60.png">
@@ -59,41 +59,34 @@ Version: 1.0
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="<?php echo esc_url( get_template_directory_uri() ); ?>/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-	
-	<?php wp_head(); ?>
-      <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
-</head>
+    
+    <?php wp_head(); ?>
+    
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css">
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/travelline-styles.css">
+      <!-- start TL head script -->
+      <script type="text/javascript">
+          (function(w){
+              var q=[
+                  ['setContext', 'TL-INT-star-crimea', 'ru']
+              ];
+              var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+              if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
+          })(window);
+      </script>
+      <!-- end TL head script -->
+  </head>
 
   <body <?php body_class(); ?>>
+  
+  <!-- HelloPreload https://hello-site.ru/preloader/ -->
+  <!--<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #8B2938 url(/wp-content/themes/nord/images/oval.svg) center center no-repeat;background-size:41px;}</style>
+  <div id="hellopreloader"><div id="hellopreloader_preload"></div><p></p></div>
+  <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>-->
+  <!-- HelloPreload https://hello-site.ru/preloader/ -->
+  
 	<div id="page">
-        <nav id="menu">
-			<?php
-				if (has_nav_menu('mobile_menu')){
-					wp_nav_menu( array(
-						'theme_location'  => 'mobile_menu',
-						'menu'            => '',
-						'container'       => false,
-						'container_class' => '',
-						'container_id'    => '',
-						'menu_class'      => '',
-						'menu_id'         => '',
-						'echo'            => true,
-						'fallback_cb'     => 'wp_page_menu',
-						'before'          => '',
-						'after'           => '',
-						'link_before'     => '',
-						'link_after'      => '',
-						'items_wrap'      => '<ul>%3$s</ul>',
-						'depth'           => 2,
-						'walker'          => new primary_menu(),
-					) );
-				}
-			?>
-        </nav>
-
     <!-- start header -->
-
-
     <div id="top"></div>
 
     <header class="header">

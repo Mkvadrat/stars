@@ -33,13 +33,34 @@ get_header();
 		</div>
 
         <!-- end top slider -->
-		
+        <!-- start TL Search form script -->
+        <div id="block-search">
+            <div id="tl-search-form" class="tl-container"><noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex></div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                var idInter = setInterval(function() {
+                    if (document.getElementById("mm-0")!= null) {
+                        clearInterval(idInter);
+                        (function(w){
+                            var q=[
+                                ['setContext', 'TL-INT-star-crimea', 'ru'],
+                                ['embed', 'search-form', {container: 'tl-search-form'}]
+                            ];
+                            var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+                            if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
+                        })(window);
+                    }
+                }, 1000);
+            });
+        </script>
+        <!-- end TL Search form script -->
         <!-- start offers -->
 		<?php
-			$get_cat_inf = get_the_terms( get_the_ID(), 'news-list' );
-			$cat_id = $get_cat_inf[0]->term_id;
-			$cat_code = get_option('news-list_'.$cat_id.'_code_block_category_news');
-			echo $cat_code;
+			$term = get_the_terms($post->ID, 'news-list');
+			$cat_id = $term[0]->term_id;
+			$cat_code = get_term_meta($cat_id, 'code_block_category_news');
+			echo $cat_code[0];
 		?>
         <!-- end offers -->
 		

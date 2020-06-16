@@ -14,18 +14,18 @@ $(document).ready(function () {
     $('.callback *[type="checkbox"]')
     .on('change', function () {
         if ($(this).is(':checked')) {
-            $('*[type="submit"]').attr('disabled', 'disabled');
-        } else {
             $('*[type="submit"]').removeAttr('disabled');
+        } else {
+            $('*[type="submit"]').attr('disabled', 'disabled'); 
         }
     });
     
     $('.lightform *[type="checkbox"]')
     .on('change', function () {
         if ($(this).is(':checked')) {
-            $('*[type="submit"]').attr('disabled', 'disabled');
+            $('*[type="submit"]').removeAttr('disabled');  
         } else {
-            $('*[type="submit"]').removeAttr('disabled');
+            $('*[type="submit"]').attr('disabled', 'disabled');
         }
     });
     
@@ -64,10 +64,10 @@ $(document).ready(function () {
         nav : true,
         navText : "",
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 7500,
         dots : true
     });
-    
+     
     $("a.gallery").fancybox();
     
     $(".fancybox").fancybox();

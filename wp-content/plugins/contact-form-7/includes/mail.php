@@ -213,7 +213,7 @@ function wpcf7_mail_replace_tags( $content, $args = '' ) {
 			$replaced_tags = $line->get_replaced_tags();
 
 			if ( empty( $replaced_tags )
-			or array_filter( $replaced_tags ) ) {
+			or array_filter( $replaced_tags, 'strlen' ) ) {
 				$content[$num] = $replaced;
 			} else {
 				unset( $content[$num] ); // Remove a line.
@@ -353,7 +353,8 @@ class WPCF7_MailTaggedText {
 		}
 
 		$special = apply_filters( 'wpcf7_special_mail_tags', null,
-			$mail_tag->tag_name(), $html, $mail_tag );
+			$mail_tag->tag_name(), $html, $mail_tag
+		);
 
 		if ( null !== $special ) {
 			$this->replaced_tags[$tag] = $special;

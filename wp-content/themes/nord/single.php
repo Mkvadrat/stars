@@ -36,10 +36,10 @@ get_header();
 
         <!-- start offers -->
 		<?php
-			$get_cat_inf = get_the_terms( get_the_ID(), 'category' );
-			$cat_id = $get_cat_inf[0]->term_id;
-			$cat_code = get_option('category_'.$cat_id.'_code_block_category_services');
-			echo $cat_code;
+			$term = get_the_terms($post->ID, 'category');
+			$cat_id = $term[0]->term_id;
+			$cat_code = get_term_meta($cat_id, 'code_block_category_services');
+			echo $cat_code[0];
 		?>
         <!-- end offers -->
 

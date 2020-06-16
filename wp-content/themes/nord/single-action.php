@@ -10,8 +10,8 @@ Version: 1.0
 
 get_header();
 ?>
-	
-	<main class="action-in">
+
+	<main class="service-in">
 
         <!-- start top slider -->
 
@@ -30,23 +30,40 @@ get_header();
 				}
 			?>
 		</div>
-
+        <!-- start TL Search form script -->
+        <div id="block-search">
+            <div id="tl-search-form" class="tl-container"><noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex></div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                var idInter = setInterval(function() {
+                    if (document.getElementById("mm-0")!= null) {
+                        clearInterval(idInter);
+                        (function(w){
+                            var q=[
+                                ['setContext', 'TL-INT-star-crimea', 'ru'],
+                                ['embed', 'search-form', {container: 'tl-search-form'}]
+                            ];
+                            var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+                            if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
+                        })(window);
+                    }
+                }, 1000);
+            });
+        </script>
+        <!-- end TL Search form script -->
         <!-- end top slider -->
-
+        <div class="text-block title-page">
+            <h1 class="h1-title-center"><?php the_title(); ?></h1>
+        </div>
+        <hr>
         <!-- start offers -->
-		<?php
-			$get_cat_inf = get_the_terms( get_the_ID(), 'action-list' );
-			$cat_id = $get_cat_inf[0]->term_id;
-			$cat_code = get_option('action-list_'.$cat_id.'_code_block_category_action');
-			echo $cat_code;
-		?>
+        <?php echo get_post_meta( get_the_ID(), 'code_block_action_page', $single = true ); ?>
         <!-- end offers -->
 
-		<div class="text-block title-page">
-            <h1 class="h1-title-center"><?php the_title(); ?></h1>
-		</div>
+		<hr>
 
-        <div class="sub-text-block">
+        <div class="text-block open-text-block">
             <?php echo get_post_meta( get_the_ID(), 'text_action_page', $single = true ); ?>
 		</div>
     </main>

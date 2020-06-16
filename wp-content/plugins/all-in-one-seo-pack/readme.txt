@@ -1,21 +1,21 @@
 === All in One SEO Pack ===
-Contributors: hallsofmontezuma, semperplugins, wpsmort, arnaudbroes
+Contributors: semperplugins, smub, benjaminprojas
 Tags: SEO, Google Search Console, XML Sitemap, meta description, meta title, noindex
-Requires at least: 4.6
-Tested up to: 5.1
-Stable tag: 2.12
+Requires at least: 4.9
+Tested up to: 5.4.1
+Stable tag: 3.5.2
 License: GPLv2 or later
 Requires PHP: 5.2.4
 
-The original WordPress SEO plugin, downloaded over 50,000,000 times since 2007.
+The original WordPress SEO plugin, downloaded over 65,000,000 times since 2007.
 
 == Description ==
 
-###The original WordPress SEO plugin, downloaded over 50,000,000 times since 2007.
+###The original WordPress SEO plugin, downloaded over 65,000,000 times since 2007.
 
 Use **All in One SEO Pack** to optimize your WordPress site for SEO. It's easy and works out of the box for beginners, and has advanced features and an API for developers.
 
-**[Upgrade to Pro Version](http://semperplugins.com/plugins/all-in-one-seo-pack-pro-version/?loc=readme_utpv)**
+**[Upgrade to Pro Version](https://semperplugins.com/all-in-one-seo-pack-pro-version/?loc=readme_utpv)**
 
 [Premium Support](http://semperplugins.com/support/?loc=readme_ps)
 
@@ -23,8 +23,10 @@ First created in 2007, see why AIOSEO is one of the all time most downloaded plu
 
 * XML Sitemap support - submit your sitemap to Google and Bing and improve your SEO
 * Image XML Sitemap submitted to Google and Bing to improve your Image SEO
+* RSS Sitemap
 * Google AMP support (Accelerated Mobile Pages)
 * Google Analytics support
+* Schema.org Markup
 * Support for SEO on Custom Post Types
 * Advanced Canonical URLs
 * Redirect attachment pages to parent post
@@ -42,14 +44,11 @@ First created in 2007, see why AIOSEO is one of the all time most downloaded plu
 * Translated into 57 languages
 * PHP 7 100% Compatible
 
-Follow me on Twitter to keep up with the latest updates [Michael
-Torbert](http://twitter.com/michaeltorbert/)
-
 https://www.youtube.com/watch?v=46MR4FboMaA
 
 == Changelog ==
 
-All in One SEO Pack [Changelog](https://semperfiwebdesign.com/all-in-one-seo-pack-release-history/)
+All in One SEO Pack [Changelog](https://semperplugins.com/all-in-one-seo-pack-changelog/)
 
 == Frequently Asked Questions ==
 

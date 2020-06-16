@@ -43,7 +43,6 @@ get_header();
              <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ebe5bd35d8e6c7e7e3cdfa0c99df1a5b054b91c37b3e718a6812c32b58fb17a&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>-->
 
              <div class="map" id="maps" style="width:100%; height:560px"></div>
-             <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.full" type="text/javascript"> </script>
              <script type="text/javascript">
                  var myMap;
                  ymaps.ready(init);

@@ -14,45 +14,44 @@ Version: 1.0
 ***********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************/
 function pn_scripts(){
-	
 	wp_register_style( 'reset-css', get_template_directory_uri() . '/css/reset.css');
-    wp_enqueue_style( 'reset-css' );
+	wp_enqueue_style( 'reset-css' );
 	
 	wp_register_style( 'fonts-css', get_template_directory_uri() . '/css/fonts.css');
-    wp_enqueue_style( 'fonts-css' );
+	wp_enqueue_style( 'fonts-css' );
 	
 	wp_register_style( 'main-css', get_template_directory_uri() . '/css/main.css?v=3');
-    wp_enqueue_style( 'main-css' );
-		
+	wp_enqueue_style( 'main-css' );
+	
 	wp_register_style( 'media-css', get_template_directory_uri() . '/css/media.css');
-    wp_enqueue_style( 'media-css' );
+	wp_enqueue_style( 'media-css' );
 	
 	wp_register_style( 'ui-css', get_template_directory_uri() . '/js/jquery-ui-1.12.1/jquery-ui.min.css');
-    wp_enqueue_style( 'ui-css' );
+	wp_enqueue_style( 'ui-css' );
 	
 	wp_register_style( 'carousel-css', get_template_directory_uri() . '/css/owl.carousel.min.css');
-    wp_enqueue_style( 'carousel-css' );
+	wp_enqueue_style( 'carousel-css' );
 	
 	wp_register_style( 'theme-css', get_template_directory_uri() . '/css/owl.theme.default.css');
-    wp_enqueue_style( 'theme-css' );
-		
+	wp_enqueue_style( 'theme-css' );
+	
 	wp_register_style( 'theme-css', get_template_directory_uri() . '/css/owl.theme.default.css');
-    wp_enqueue_style( 'theme-css' );
+	wp_enqueue_style( 'theme-css' );
 	
 	wp_register_style( 'fancybox-css', get_template_directory_uri() . '/source/jquery.fancybox.css?v=2.1.5');
-    wp_enqueue_style( 'fancybox-css' );
+	wp_enqueue_style( 'fancybox-css' );
 	
 	wp_register_style( 'fancybox-buttons-css', get_template_directory_uri() . '/source/helpers/jquery.fancybox-buttons.css?v=1.0.5');
-    wp_enqueue_style( 'fancybox-buttons-css' );
+	wp_enqueue_style( 'fancybox-buttons-css' );
 	
 	wp_register_style( 'fancybox-thumbs-css', get_template_directory_uri() . '/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7');
-    wp_enqueue_style( 'fancybox-thumbs-css' );
+	wp_enqueue_style( 'fancybox-thumbs-css' );
 	
 	wp_register_style( 'mmenu-css', get_template_directory_uri() . '/css/jquery.mmenu.all.css');
-    wp_enqueue_style( 'mmenu-css' );
+	wp_enqueue_style( 'mmenu-css' );
 	
 	wp_register_style( 'slimmenu-css', get_template_directory_uri() . '/css/slimmenu.min.css');
-    wp_enqueue_style( 'slimmenu-css' );
+	wp_enqueue_style( 'slimmenu-css' );
 	
 	if (!is_admin()) {
 		wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/js/jquery-1.9.1.min.js', '', '', true );
@@ -69,6 +68,7 @@ function pn_scripts(){
 		wp_enqueue_script( 'travelline-js', get_template_directory_uri() . '/js/travelline.js', '', '', true );
 		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', '', '', true );
 		wp_enqueue_script( 'slimmenu-js', get_template_directory_uri() . '/js/jquery.slimmenu.min.js', '', '', true );
+		wp_enqueue_script( 'maps-min', 'https://api-maps.yandex.ru/2.1/?apikey=ab9d1445-7a97-43fe-86f4-ac25c483e656&load=package.full&lang=ru-RU', '', '', false );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pn_scripts' );
@@ -168,6 +168,13 @@ add_filter('the_generator', 'wpmudev_remove_version');
 //Отключить редактор
 add_filter('use_block_editor_for_post', '__return_false');
 
+//Удаляем ненужные пункты меню
+function remove_menus(){
+	//remove_menu_page( 'edit-comments.php' );          //Комментарии
+	remove_menu_page( 'edit.php' );                   // Записи
+}
+add_action( 'admin_menu', 'remove_menus' );
+
 /**********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************
 ****************************************************************************МЕНЮ САЙТА*********************************************************************
@@ -177,7 +184,7 @@ add_filter('use_block_editor_for_post', '__return_false');
 class primary_menu extends Walker_Nav_Menu {
 
 	// Добавляем классы к вложенным ul
-	function start_lvl( &$output, $depth ) {
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		// Глубина вложенных ul
 		$indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
 		$display_depth = ( $depth + 1); // because it counts the first submenu as 0
@@ -194,7 +201,7 @@ class primary_menu extends Walker_Nav_Menu {
 	}
 
 	// Добавляем классы к вложенным li
-	function start_el( &$output, $item, $depth, $args ) {
+	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		global $wpdb;
 		global $wp_query;
 		$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
@@ -383,8 +390,8 @@ add_action( 'init', 'create_taxonomies_rooms', 0 );
 //Вывод в админке раздела номера
 function register_post_type_action() {
 	$labels = array(
-	 'name' => 'Акции',
-	 'singular_name' => 'Акции',
+	 'name' => 'Акции и новости',
+	 'singular_name' => 'Акции и новости',
 	 'add_new' => 'Добавить статью',
 	 'add_new_item' => 'Добавить новую статью',
 	 'edit_item' => 'Редактировать статью',
@@ -394,7 +401,7 @@ function register_post_type_action() {
 	 'search_items' => 'Искать статью',
 	 'not_found' => 'Статья не найден.',
 	 'not_found_in_trash' => 'В корзине нет статьи.',
-	 'menu_name' => 'Акции'
+	 'menu_name' => 'Акции и новости'
 	 );
 	 $args = array(
 		 'labels' => $labels,
@@ -444,107 +451,6 @@ function create_taxonomies_action()
     ));
 }
 add_action( 'init', 'create_taxonomies_action', 0 );
-
-/**********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-**********************************************************************"РАЗДЕЛ НОВОСТИ"*********************************************************************
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************/
-//Вывод в админке раздела новости
-function register_post_type_news() {
-	$labels = array(
-	 'name' => 'Новости',
-	 'singular_name' => 'Новости',
-	 'add_new' => 'Добавить статью',
-	 'add_new_item' => 'Добавить новую статью',
-	 'edit_item' => 'Редактировать статью',
-	 'new_item' => 'Новая статью',
-	 'all_items' => 'Все статьи',
-	 'view_item' => 'Просмотр статей на сайте',
-	 'search_items' => 'Искать статью',
-	 'not_found' => 'Статья не найден.',
-	 'not_found_in_trash' => 'В корзине нет статьи.',
-	 'menu_name' => 'Новости'
-	 );
-	 $args = array(
-		 'labels' => $labels,
-		 'public' => true,
-		 'exclude_from_search' => false,
-		 'show_ui' => true,
-		 'has_archive' => false,
-		 'menu_icon' => 'dashicons-editor-paragraph', // иконка в меню
-		 'menu_position' => 20,
-		 'supports' =>  array('title','editor', 'thumbnail'),
-	 );
- 	register_post_type('news', $args);
-}
-add_action( 'init', 'register_post_type_news' );
-
-function true_post_type_news( $news ) {
-	global $post, $post_ID;
-
-	$news['news'] = array(
-			0 => '',
-			1 => sprintf( 'Статьи обновлены. <a href="%s">Просмотр</a>', esc_url( get_permalink($post_ID) ) ),
-			2 => 'Статья обновлёна.',
-			3 => 'Статья удалёна.',
-			4 => 'Статья обновлена.',
-			5 => isset($_GET['revision']) ? sprintf( 'Статья восстановлена из редакции: %s', wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-			6 => sprintf( 'Статья опубликована на сайте. <a href="%s">Просмотр</a>', esc_url( get_permalink($post_ID) ) ),
-			7 => 'Статья сохранена.',
-			8 => sprintf( 'Отправлена на проверку. <a target="_blank" href="%s">Просмотр</a>', esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-			9 => sprintf( 'Запланирована на публикацию: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Просмотр</a>', date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-			10 => sprintf( 'Черновик обновлён. <a target="_blank" href="%s">Просмотр</a>', esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-	);
-	return $news;
-}
-add_filter( 'post_updated_messages', 'true_post_type_news' );
-	
-//Категории для пользовательских записей "Новости"
-function create_taxonomies_news()
-{
-    // Cats Categories
-    register_taxonomy('news-list',array('news'),array(
-        'hierarchical' => true,
-        'label' => 'Рубрики',
-        'singular_name' => 'Рубрика',
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'news-list' )
-    ));
-}
-add_action( 'init', 'create_taxonomies_news', 0 );
-
-/**********************************************************************************************************************************************************
-***********************************************************************************************************************************************************
-************************************************************ПЕРЕИМЕНОВАВАНИЕ ЗАПИСЕЙ В УСЛУГИ**************************************************************
-***********************************************************************************************************************************************************
-***********************************************************************************************************************************************************/
-function change_post_menu_label() {
-    global $menu, $submenu;
-    $menu[5][0] = 'Услуги';
-    $submenu['edit.php'][5][0] = 'Услуги';
-    $submenu['edit.php'][10][0] = 'Добавить статью';
-    $submenu['edit.php'][16][0] = 'Метки';
-    echo '';
-}
-add_action( 'admin_menu', 'change_post_menu_label' );
-
-function change_post_object_label() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Услуги';
-    $labels->singular_name = 'Услуги';
-    $labels->add_new = 'Добавить статью';
-    $labels->add_new_item = 'Добавить статью';
-    $labels->edit_item = 'Редактировать статью';
-    $labels->new_item = 'Добавить статью';
-    $labels->view_item = 'Посмотреть статью';
-    $labels->search_items = 'Найти статью';
-    $labels->not_found = 'Не найдено';
-    $labels->not_found_in_trash = 'Корзина пуста';
-}
-add_action( 'init', 'change_post_object_label' );
 
 /**********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************
@@ -681,71 +587,6 @@ function parse_request_url_category_action( $query ){
 }
 add_filter('request', 'parse_request_url_category_action', 1, 1 );
 
-//Удаление  из url таксономии Новости
-function true_remove_slug_from_category_news( $url, $term, $taxonomy ){
-
-	$taxonomia_name = 'news-list';
-	$taxonomia_slug = 'news-list';
-
-	if ( strpos($url, $taxonomia_slug) === FALSE || $taxonomy != $taxonomia_name ) return $url;
-
-	$url = str_replace('/' . $taxonomia_slug, '', $url);
-
-	return $url;
-}
-add_filter( 'term_link', 'true_remove_slug_from_category_news', 10, 3 );
-
-//Перенаправление url в случае удаления news-list
-function parse_request_url_category_news( $query ){
-
-	$taxonomia_name = 'news-list';
-
-	if( $query['attachment'] ) :
-		$condition = true;
-		$main_url = $query['attachment'];
-	else:
-		$condition = false;
-		$main_url = $query['name'];
-	endif;
-
-	$termin = get_term_by('slug', $main_url, $taxonomia_name);
-
-	if ( isset( $main_url ) && $termin && !is_wp_error( $termin )):
-
-		if( $condition ) {
-			unset( $query['attachment'] );
-			$parent = $termin->parent;
-			while( $parent ) {
-				$parent_term = get_term( $parent, $taxonomia_name);
-				$main_url = $parent_term->slug . '/' . $main_url;
-				$parent = $parent_term->parent;
-			}
-		} else {
-			unset($query['name']);
-		}
-
-		switch( $taxonomia_name ):
-			case 'category':{
-				$query['category_name'] = $main_url;
-				break;
-			}
-			case 'post_tag':{
-				$query['tag'] = $main_url;
-				break;
-			}
-			default:{
-				$query[$taxonomia_name] = $main_url;
-				break;
-			}
-		endswitch;
-
-	endif;
-
-	return $query;
-
-}
-add_filter('request', 'parse_request_url_category_news', 1, 1 );
-
 /**********************************************************************************************************************************************************
 ***********************************************************************************************************************************************************
 *****************************************************************REMOVE POST_TYPE SLUG*********************************************************************
@@ -753,7 +594,7 @@ add_filter('request', 'parse_request_url_category_news', 1, 1 );
 ***********************************************************************************************************************************************************/
 //Удаление sluga из url таксономии 
 function remove_slug_from_post( $post_link, $post, $leavename ) {
-	if ( 'rooms' != $post->post_type && 'news' != $post->post_type && 'action' != $post->post_type || 'publish' != $post->post_status ) {
+	if ( 'rooms' != $post->post_type && 'action' != $post->post_type || 'publish' != $post->post_status ) {
 		return $post_link;
 	}
 		$post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
@@ -770,7 +611,7 @@ function parse_request_url_post( $query ) {
 	}
 
 	if ( ! empty( $query->query['name'] ) ) {
-		$query->set( 'post_type', array( 'post', 'rooms', 'news', 'action', 'page' ) );
+		$query->set( 'post_type', array( 'post', 'rooms', 'action', 'page' ) );
 	}
 }
 add_action( 'pre_get_posts', 'parse_request_url_post' );
@@ -875,10 +716,8 @@ add_action('wp_ajax_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_{зна�
 add_action('wp_ajax_nopriv_ajaxcomments', 'true_add_ajax_comment'); // wp_ajax_nopriv_{значение параметра action}
 
 if (function_exists('register_sidebar'))
-    register_sidebar(array(
-        'name' => 'Top address',
-        'before_widget' => '<div class="top__address">',
-        'after_widget' => '</div>',
-    ));
-
-
+	register_sidebar(array(
+			'name' => 'Top address',
+			'before_widget' => '<div class="top__address">',
+			'after_widget' => '</div>',
+	));

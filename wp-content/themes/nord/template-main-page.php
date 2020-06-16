@@ -33,7 +33,28 @@ get_header();
             </div>
 
             <!-- end top slider -->
-
+            <!-- start TL Search form script -->
+            <div id="block-search">
+                <div id="tl-search-form" class="tl-container"><noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex></div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function(){
+                    var idInter = setInterval(function() {
+                        if (document.getElementById("mm-0")!= null) {
+                            clearInterval(idInter);
+                            (function(w){
+                                var q=[
+                                    ['setContext', 'TL-INT-star-crimea', 'ru'],
+                                    ['embed', 'search-form', {container: 'tl-search-form'}]
+                                ];
+                                var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+                                if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
+                            })(window);
+                        }
+                    }, 1000);
+                });
+            </script>
+            <!-- end TL Search form script -->
             <!-- start offers -->
 
             <div class="offers">
@@ -70,10 +91,9 @@ get_header();
             <div class="our-rooms">
                 <div class="max__wrap">
 
-                    <h2 class="h3-title-center">Номера пансионата</h2>
+                    <h2 class="h3-title-center">Пансионат “Звездный” в Судаке: Номера</h2>
 
-                    <p class="sub-title">К вашим услугам мы предлагаем уютные и светлые номера на любой вкус и для
-                        любого бюджета.</p>
+                    <p class="sub-title">Хотите в 2020 году отдохнуть в Крыму недорого? Выбирайте и бронируйте номера в пансионате прямо сейчас, цены на проживание и питание вас приятно порадуют!</p>
                     <ul>
                         <?php
                         foreach ($rooms_list as $list) {
@@ -128,8 +148,13 @@ get_header();
         <div class="seo__home">
             <div class="max__wrap">
                 <h1 class="h1-title-center"><?php echo get_post_meta(get_the_ID(), 'title_main_page', $single = true); ?></h1>
-                <div class="sub-title">К вашим услугам мы предлагаем уютные и светлые номера на любой вкус и для любого
-                    бюджета.
+                <div class="sub-title">Отдых в Судаке - это лучший ответ на вопрос: “Где отдохнуть недорого в Крыму?”. Наш пансионат подарит вам настоящий семейный отпуск 2020. Огромная территория, вкусное и полезное питание, медицинские услуги, отличная инфраструктура  нашего комплекса, удивительная анимация для детей  - все это гарантия лучшего  отдыха и прекрасных впечатлений.
+                <p><strong>&nbsp;</strong></p>
+
+    <p style="text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Не смотря ни на что, я искренне надеюсь и верю, в то, что мы обязательно вернемся в Звездный. К сожалению, этот год ударил по всем нам. И путевка, заказанная на июнь пролетает мимо, НО, все читающие должны знать, что Звездный - это один из немногих крымских пансионатов советских времен постройки, который проводит колоссальную работу по усовершенствованию номерного фонда, организации питания и облагораживанию территории. Поверьте, я знаю, о чем говорю! Это далеко не первый мой крымский пансионат времен советов. Здесь я вижу, что владельцы искренне стараются сделать наш с Вами быт комфортным и дать нам почувствовать себя именно на отдыхе, настоящем, ни о чем не задумываясь, кроме чудесной, уникальной крымской природы и бескрайнего моря. <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я хочу поблагодарить Пансионат Звездный за то, что он открыл для меня Судак, как город с глубокой историей, как отправную точку во многие потрясающие и доступные исторические места, но при этом современный и интересный, в качестве именно курортного. И я хочу поблагодарить всех работников данного пансионата, пожелать им сил и терпения в этот не легкий год, сохраните для нас свой пансионат, я верю, что мы с вами еще встретимся и вы перенесете эту неприятность стойко. А я в свою очередь буду надеяться, что мне и моей семье удастся вас все же посетить в 2020 году, если нет, то хотя бы в 2021. Удачи Вам и непременно сил пережить, то, что сейчас происходит. Мы Вас любим!</p>
+                                    <p style="text-align:right"><strong>Ольга Проскурнина</strong></p>
+
                 </div>
             </div>
             <?php echo get_post_meta(get_the_ID(), 'text_main_page', $single = true); ?>
@@ -300,47 +325,40 @@ get_header();
 
         <div class="block-for-half contacts-block">
             <div class="left-side">
-                <!--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1ebe5bd35d8e6c7e7e3cdfa0c99df1a5b054b91c37b3e718a6812c32b58fb17a&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>-->
-                <div class="map" id="maps" style="width:100%; height:600px"></div>
-                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=package.full"
-                        type="text/javascript"></script>
+                <div class="map" id="sevastopol" style="width:100%; height:100%"></div>
+                
                 <script type="text/javascript">
-                    var myMap;
+                    var sevastopolMap, sevastopolPlacemark, sevastopolcoords;
+                
                     ymaps.ready(init);
-
+                
                     function init() {
-                        ymaps.geocode('<?php echo get_post_meta(get_the_ID(), 'address_for_map_main_page', $single = true); ?>', {
-                            results: 1
-                        }).then
-                        (
-                            function (res) {
-                                var firstGeoObject = res.geoObjects.get(0),
-                                    myMap = new ymaps.Map
-                                    ("maps",
-                                        {
-                                            center: firstGeoObject.geometry.getCoordinates(),
-                                            zoom: 15,
-                                            controls: ["zoomControl", "fullscreenControl"]
-                                        }
-                                    );
-                                var myPlacemark = new ymaps.Placemark
-                                (
-                                    firstGeoObject.geometry.getCoordinates(),
-                                    {
-                                        iconContent: ''
-                                    },
-                                    {
-                                        preset: 'twirl#blueStretchyIcon'
-                                    }
-                                );
-                                myMap.geoObjects.add(myPlacemark);
-                                myMap.controls.add('typeSelector');
-                                myMap.behaviors.disable('scrollZoom');
-                            },
-                            function (err) {
-                                alert(err.message);
-                            }
-                        );
+                
+                        sevastopolMap = new ymaps.Map('sevastopol', {
+                
+                            center: [<?php echo get_post_meta(get_the_ID(), 'address_for_map_main_page', $single = true); ?>],
+                
+                            zoom: 17
+                
+                        });
+                
+                        var SearchControl = new ymaps.control.SearchControl({noPlacemark: true});
+                
+                        sevastopolMap.controls
+                
+                        //.add('zoomControl')
+                
+                            .add('typeSelector')
+                
+                        sevastopolcoords = [<?php echo get_post_meta(get_the_ID(), 'address_for_map_main_page', $single = true); ?>];
+                
+                        sevastopolPlacemark = new ymaps.Placemark([<?php echo get_post_meta(get_the_ID(), 'address_for_map_main_page', $single = true); ?>], {}, {
+                            preset: "twirl#redIcon",
+                            draggable: true
+                        });
+                
+                        sevastopolMap.geoObjects.add(sevastopolPlacemark);
+                        sevastopolMap.behaviors.disable('scrollZoom');
                     }
                 </script>
             </div>

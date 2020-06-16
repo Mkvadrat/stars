@@ -2,8 +2,8 @@
  * Controls all the styling of the plugin.
  *
  * AIOSEOP Updates class.
- * @author Michael Torbert.
- * @author Semper Fi Web Design.
+ *
+ * @author All in One SEO Team.
  * @copyright https://semperplugins.com
  * @version 1.0.0
  */
@@ -265,7 +265,7 @@ jQuery( document ).ready(
          * @see http://www.webmaster-source.com/2013/02/06/using-the-wordpress-3-5-media-uploader-in-your-plugin-or-theme/
          * @since ?
          * @since 2.3.11.2 Use WP 3.5 new media uploader
-         * @since 2.3.13 Fixed issue #[740](https://github.com/semperfiwebdesign/all-in-one-seo-pack/issues/740)
+         * @since 2.3.13 Fixed issue #[740](https://github.com/awesomemotive/all-in-one-seo-pack/issues/740)
          *
          */
         jQuery(document).ready(
@@ -445,7 +445,7 @@ jQuery( document ).ready(
 	 * @since 1.0.0
 	 * @return boolean.
 	 */
-		jQuery(	"div#aiosp_video_sitemap_addl_pages_metabox" )
+		jQuery( "div#aiosp_video_sitemap_addl_pages_metabox" )
 		.delegate(
 			"input[name='Submit']", "click", function() {
 				aioseop_handle_post_url(
@@ -499,7 +499,7 @@ jQuery( document ).ready(
 	 * @param $e.
 	 * @return boolean.
 	 */
-		jQuery(	"div#aiosp_opengraph_scan_header" )
+		jQuery( "div#aiosp_opengraph_scan_header" )
 		.delegate(
 			"input[name='aiosp_opengraph_scan_header']", "click", function( e ) {
 				e.preventDefault();
@@ -515,7 +515,7 @@ jQuery( document ).ready(
 		/**
 	 * @since 1.0.0
 	 */
-		jQuery(	'input[name="aiosp_sitemap_posttypes[]"][value="all"], input[name="aiosp_video_sitemap_posttypes[]"][value="all"], input[name="aiosp_sitemap_taxonomies[]"][value="all"], input[name="aiosp_video_sitemap_taxonomies[]"][value="all"]' )
+		jQuery( 'input[name="aiosp_sitemap_posttypes[]"][value="all"], input[name="aiosp_video_sitemap_posttypes[]"][value="all"], input[name="aiosp_sitemap_taxonomies[]"][value="all"], input[name="aiosp_video_sitemap_taxonomies[]"][value="all"]' )
 		.click(
 			function() {
 				jQuery( this )
@@ -540,31 +540,10 @@ jQuery( document ).ready(
 			}
 		);
 
-		/**
-	 * @since 1.0.0
-	 */
-		jQuery( ".aioseop_tab:not(:first)" ).hide();
-
-		/**
-	 * @since 1.0.0
-	 */
-		jQuery( ".aioseop_tab:first" ).show();
-
-		/**
-	 * @since 1.0.0
-	 * @return boolean.
-	 */
-		jQuery( "a.aioseop_header_tab" ).click(
-			function() {
-				var stringref = jQuery( this ).attr( "href" ).split( '#' )[1];
-				jQuery( '.aioseop_tab:not(#' + stringref + ')' ).hide( 'slow' );
-				jQuery( '.aioseop_tab#' + stringref ).show( 'slow' );
-				jQuery( '.aioseop_header_tab[href!="#' + stringref + '"]' ).removeClass( 'active' );
-				jQuery( '.aioseop_header_tab[href="#' + stringref + '"]' ).addClass( 'active' );
-				return false;
-			}
-		);
-
+        jQuery('.aioseop_tabs').tabs({
+            hide: true,
+            show: true
+        });
 
 		jQuery( "div#aiosp_robots_default_metabox" )
 		.delegate(
@@ -594,7 +573,7 @@ jQuery( document ).ready(
 				return false;
 			}
 		);
-    
+
 		jQuery( "a.aiosp_robots_physical" ).on( 'click', function( e ) {
 			e.preventDefault();
 			aioseop_handle_post_url(

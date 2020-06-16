@@ -38,7 +38,7 @@ get_header();
 	
 		<div class="reviews-block">
 	
-			<p class="white-title">Отзывы гостей отеля Норд</p>
+			<p class="white-title">Отзывы гостей отеля</p>
 	
 			<ul class="reviews-list">
 				<?php

@@ -33,9 +33,51 @@ get_header();
 		</div>
 
         <!-- end top slider -->
-
+            <!-- start TL Search form script -->
+            <div id="block-search">
+                <div id="tl-search-form" class="tl-container"><noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex></div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function(){
+                    var idInter = setInterval(function() {
+                        if (document.getElementById("mm-0")!= null) {
+                            clearInterval(idInter);
+                            (function(w){
+                                var q=[
+                                    ['setContext', 'TL-INT-star-crimea', 'ru'],
+                                    ['embed', 'search-form', {container: 'tl-search-form'}]
+                                ];
+                                var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+                                if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
+                            })(window);
+                        }
+                    }, 1000);
+                });
+            </script>
+            <!-- end TL Search form script -->
         <!-- start offers -->
-
+            <!-- start TL Search form script -->
+            <div id="block-search">
+                <div id="tl-search-form" class="tl-container"><noindex><a href="http://www.travelline.ru/products/tl-hotel/" rel="nofollow">система онлайн-бронирования</a></noindex></div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function(){
+                    var idInter = setInterval(function() {
+                        if (document.getElementById("mm-0")!= null) {
+                            clearInterval(idInter);
+                            (function(w){
+                                var q=[
+                                    ['setContext', 'TL-INT-star-crimea', 'ru'],
+                                    ['embed', 'search-form', {container: 'tl-search-form'}]
+                                ];
+                                var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+                                if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
+                            })(window);
+                        }
+                    }, 1000);
+                });
+            </script>
+            <!-- end TL Search form script -->
 		<?php				   
 			$term = get_queried_object();
 			$cat_id = $term->term_id;
@@ -45,14 +87,16 @@ get_header();
 
         <!-- end offers -->
 
-        <div class="text-block">
-            <h1 class="h1-title-center">
-				<?php				   
+<div class="text-block title-page">
+<h1 class="h1-title-center">
+<?php				   
 					$cat_title_id = $term->term_id;
 					$cat_title = get_term_meta($cat_title_id, 'title_category_news');
 					echo $cat_title[0];
 				?>
-			</h1>
+</h1>
+</div>
+
 			
 			<div class="text-block">
 				<?php				   
@@ -62,7 +106,7 @@ get_header();
 				?>
 			</div>
         <!-- start akcii-list -->
-
+<div class="text-block">
 		<?php
 			$current_page = (get_query_var('paged')) ? get_query_var('paged') : 1;
 			$args = array(

@@ -29,10 +29,10 @@ get_header();
 		
 		<!-- start offers -->
 		<?php
-			$get_cat_inf = get_the_terms( get_the_ID(), 'rooms-list' );
-			$cat_id = $get_cat_inf[0]->term_id;
-			$cat_code = get_option('rooms-list_'.$cat_id.'_code_block_category_rooms');
-			echo $cat_code;
+			$term = get_the_terms($post->ID, 'rooms-list');
+			$cat_id = $term[0]->term_id;
+			$cat_code = get_term_meta($cat_id, 'code_block_category_rooms');
+			echo $cat_code[0];
 		?>
         <!-- end offers -->
 				
@@ -42,7 +42,7 @@ get_header();
             <div class="text-block">
                 <div class="block-galery">
                     <p class="h3-title">Фотографии номера</p>
-                    <p class="sub-text">Каждый номер с удобствами и двумя балконами.</p>
+                    <p class="sub-text">Каждый номер с удобствами и балконом.</p>
                     <ul class="galery-2">
 						<?php
 							global $nggdb;

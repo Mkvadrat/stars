@@ -1,0 +1,32 @@
+#block-search {
+    position: absolute;
+    width: 100%;
+    margin-top: -90px;
+    padding: 0 29px;
+    z-index: 9;
+    background: rgba(234, 217, 190, 0.8);
+}
+
+.tl-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#block-search-inner {
+    padding: 0 29px;
+    background: rgba(234, 217, 190, 0.8);
+}
+
+.tl-container-inner {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 1206px) {
+    #block-search {
+        position: relative;
+        margin-top: 0px;
+    }
+}
